@@ -1,0 +1,18 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+CREATE DATABASE IF NOT EXISTS `previwe` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `previwe`;
+
+DROP TABLE IF EXISTS `livros`;
+CREATE TABLE IF NOT EXISTS `livros` (
+  `nome` varchar(50) NOT NULL,
+  `codigo` int NOT NULL,
+  `url` varchar(999) NOT NULL,
+  PRIMARY KEY (`nome`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+
