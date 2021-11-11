@@ -5,11 +5,11 @@ Projeto criado por mim e integrantes do meu grupo de TCC na ETEC Juscelino Kubit
 
 **INTEGRANTES**
 
-Lucas
-Roger
-Allana
-Arthur
-Hisllayla
+Lucas,
+Roger,
+Allana,
+Arthur,
+Hisllayla e
 João  
 <hr>
 
@@ -20,9 +20,9 @@ João
 
 **LINGUAGENS**
 
-PHP
-JAVASCRIPT
-HTML
+PHP,
+JAVASCRIPT,
+HTML e
 CSS
 <hr>
 
