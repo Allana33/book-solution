@@ -9,7 +9,15 @@ include 'classes/LivroDao.php';
 
 $livroDao = new LivroDao();
 
- foreach ($livroDao->buscarLivro() as $resultado){
+if ($livroDao->buscarLivro() == 0){
+
+    echo "<p style='color: white;'>Nenhum livro cadastrado.</p>";
+    
+} 
+
+else {
+    
+    foreach ($livroDao->buscarLivro() as $resultado){
      
         echo "<div class='card-text'>";
         echo "<img src=".$resultado['url']." class='img-thumbnail' alt='X'>";
@@ -21,7 +29,7 @@ $livroDao = new LivroDao();
         echo "</div>";
         
     } 
-
+}
 
 
 

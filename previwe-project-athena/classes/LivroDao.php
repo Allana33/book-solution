@@ -31,7 +31,9 @@ class LivroDao{
 		if($stm->rowCount()>0){
 			$result = $stm->fetchAll(\PDO::FETCH_ASSOC);
 			return $result;
-		}
+		}else {
+            return 0;
+        }
 
 	}
 }

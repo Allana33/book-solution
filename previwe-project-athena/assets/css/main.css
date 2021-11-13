@@ -16,19 +16,18 @@ body{
 
 
 #a01:hover{
- color: red;
+ color: yellow;
  text-decoration: none;
- background-color: white;  
- border-color: white;
+ background-color: red;
+ border: none;
 }
 
 #a01{
 
     text-decoration: none;
-    border: 1px solid;
-    color: white;
-    border-color: red;
-    background-color: red;
+    border: none;
+    color: red;
+    background-color: yellow;
     font-family: 'Righteous';
     padding: 3px;
     transition: 0.70s;
