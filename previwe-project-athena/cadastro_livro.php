@@ -1,4 +1,3 @@
-
 <?php 
 include "Layout.php";
 $layout = new Layout();

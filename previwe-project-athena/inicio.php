@@ -1,9 +1,8 @@
-<?php include "cabecalho.php";  
-include "menu.php"; ?>
-
-<body>
-    
-</body>
-
+<?php
+include "Layout.php";
+$layout = new Layout();
+$layout->conteudo("cabecalho");
+$layout->conteudo("index");
+$layout->conteudo("rodape");
 
 

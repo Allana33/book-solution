@@ -6,7 +6,7 @@
 
 
 
-<a id="a01" href="index" target="blank">Home</a>
+<a id="a01" href="inicio" target="blank">Home</a>
 <a id="a01" href="livros" target="blank">Livros</a>
 <a id="a01" href="cadastro_livro">Cadastro de Livro</a>
 

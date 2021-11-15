@@ -19,12 +19,11 @@ else {
     
     foreach ($livroDao->buscarLivro() as $resultado){
      
-        echo "<div class='card-text'>";
-        echo "<img src=".$resultado['url']." class='img-thumbnail' alt='X'>";
-        echo "<div class='card'>";
-        echo "<h5 >".$resultado['nome']."</h5>";
-        echo "<p> Cód ".$resultado['codigo']."</p>";
-        echo "<p class='card-text'><small class='text-muted'></small></p>";
+        echo "<div class='card-text' style='width:240px';>";
+        echo "<img src=".$resultado['url']." class='img-thumbnail' alt='X' class='card-img-top' alt='not found' style='width: 240px'; height: 300px';>";
+        echo "<div class='card' style='width: 212px';>";
+        echo "<h5 class='card-title'>".$resultado['nome']."</h5>";
+        echo "<p class='card-text'> Cód ".$resultado['codigo']."</p>";
         echo "</div>";
         echo "</div>";
         

@@ -1,8 +1,7 @@
+<?php include "cabecalho.php";  
+include "menu.php";
+include "rodape.php"; ?>
 
-
-<?php
-include "Layout.php";
-$layout = new Layout();
-$layout->conteudo("cabecalho");
-$layout->conteudo("inicio");
-$layout->conteudo("rodape");
+<body>
+    
+</body>

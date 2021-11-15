@@ -13,9 +13,9 @@ class LivroDao{
         $result = $stm->execute();
 
         if($result){
-            echo "<script>alert ('Cadastrado')</script>";
+            echo "<span class='help-block' style='color: Blue;'>Cadastro efetuado com sucesso!</span>";
         }else {
-            echo "<script>alert ('Erro')</script>";
+            echo "<span class='help-block' style='color: Red;'>Erro no cadastro!</span>";
         }
     }
 
