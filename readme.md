@@ -8,7 +8,6 @@ Projeto criado por mim e integrantes do meu grupo de TCC na ETEC Juscelino Kubit
 Lucas,
 Roger,
 Allana,
-Arthur,
 Hisllayla e
 João  
 <hr>
