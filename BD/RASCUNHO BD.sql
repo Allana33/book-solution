@@ -1,48 +1,69 @@
-CREATE DATABASE LIVARIA;
+create database athena 
 
-USE LIVRARIA;
+default character set utf8mb4
 
-STATUS;
+default collate utf8mb4_unicode_ci;
 
+use athena;
 
- 
-CREATE DATABASE ATHENA;
-
-DEFAULT CHARACTER SET UTF8MB4
-DEFAULT COLLATE UTF8MB4_UNICODE_CI;
-
-USE ATHENA;
-
-CREATE TABLE FUNCIONARIO(NOME VARCHAR(30) NOT NULL, SOBRENOME VARCHAR(20) NOT NULL, EMAIL VARCHAR(30) NOT NULL, 
-CPF CHAR(11) NOT NULL, SEXO enum ('M', 'F') NOT NULL CARGO VARCHAR(30), DATA_ADMISSAO DATE NOT NULL
+create table funcionario (
+nome varchar(30) not null,
+sobrenome varchar(20) not null,
+email varchar(30), 
+cpf char(11) not null, sexo enum ('m', 'f') not null,
+cargo varchar(30),
+data_admissao date not null
 );
 
-CREATE TABLE EMPRESA( ID_EMPRESA INT PRIMARY KEY AUTO_INCREMENT NOT NULL, CNPJ CHAR(14) NOT NULL, 
-NOME_EMPRESA VARCHAR(99) NOT NULL, TELEFONE CHAR(13) NOT NULL, EMAIL VARCHAR(30) NOT NULL,  
+create table empresa (
+id_empresa int primary key auto_increment not null,
+cnpj char(14) not null, 
+nome_empresa varchar(99) not null,
+telefone char(14) not null,
+email varchar(30) not null,  
 );
 
-CREATE TABLE LIVRO(ID_LIVRO INT PRIMARY KEY AUTO_INCREMENT NOT NULL, TITULO VACHAR(100) NOT NULL, AUTOR VACHAR(30) NOT NULL, 
-ANO INT(4) NOT NULL, GENERO VARCHAR(30) NOT NULL, IDIOMA VARCHAR(30) NOT NULL, VOLUME INT, EDICAO INT,
-IMAGEM LONGBLOG NOT NULL, DATA_REGISTRO DATE NOT NULL, PAGINAS INT, DESCRICAO VARCHAR(500), STATUS ENUM('D','I') NOT NULL
+create table livro (
+id_livro int primary key auto_increment not null,
+titulo vachar(100) not null, autor vachar(30) not null, 
+data_publicacao date not null,
+genero varchar(30) not null, /* Genero seria muitos para muitos, então uma table somente para genero etc.. e fariamos uma relação */
+idioma varchar(30) not null,
+volume int, 
+edicao int,
+img_livro longblog not null,
+data_registro date not null,
+paginas int, 
+descricao varchar(500),
+status enum('d','i') not null
 ); 
 
-CREATE TABLE EDITORA(ID_EDITORA INT PRIMARY KEY AUTO_INCREMENT NOT NULL, NOME_EDITORA VARCHAR(30) NOT NULL /*NACIONALIDADE
-OU CONTATO COMO OPÇÃO*/
+create table editora (
+id_editora int primary key auto_increment not null,
+nome_editora varchar(30) not null/*nacionalidade ou contato como opção*/
 );
 
-CREATE TABLE RESERVA(ID_RESERVA INT PRIMARY KEY AUTO_INCREMENT NOT NULL, DATA_RESERVA DATE NOT NULL, PRAZO_RESERVA DATE
-NOT NULL, SITUACAO_RESERVA ENUM('X','X') NOT NULL, /*PONTO A SER DISCUTIDO NA REUNIÃO*/, ID_LIVRO INT, CONSTRAINT FK_IDLIVRO
-FOREIGN KEY (ID_LIVRO) REFERENCES LIVRO (ID_LIVRO) /*VAI TER CHAVE ESTRANGEIRA PARA FAZER LIGAÇÃO DE USUARIO?*/
+create table reserva (
+id_reserva int primary key auto_increment not null,
+data_reserva date not null,
+prazo_reserva date not null,
+situacao_reserva enum('x','x') not null, /*ponto a ser discutido na reunião*/id_livro int, constraint fk_idlivro
+foreign key (id_livro) references livro (id_livro) /*vai ter chave estrangeira para fazer ligação de usuario?*/
 );
 
-CREATE TABLE AGENDAMENTO (ID_AGENDAMENTO INT PRIMARY KEY AUTO_INCREMENT NOT NULL, DATA_RETIRADA DATE, 
-DATA_ENTREGA DATE, ID_LIVRO INT, CONSTRAINT FK_IDLIVRO FOREIGN KEY (ID_LIVRO) REFERENCES LIVRO (ID_LIVRO) /*VAI TER CHAVE
-ESTRANGEIRA PARA FAZER LIGAÇÃO DE USUARIO?*/
+create table agendamento (
+id_agendamento int primary key auto_increment not null,
+data_retirada date, 
+data_entrega date,
+id_livro int,
+constraint fk_idlivro foreign key (id_livro) references livro (id_livro) /*vai ter chave estrangeira para fazer ligação de usuario?*/
 );
 
-CREATE TABLE USUARIO(ID_USARIO INT NOT NULL PRIMARY KEY AUTO_INCREMENT, SENHA_USUARIO CHAR(10) NOT NULL, 
-NIVEL_ACESSO ENUM('A','U') NOT NULL, SITUACAO_USUARIO ENUM('B','D') NOT NULL
+create table usuario (
+id_usario int not null primary key auto_increment,
+senha_usuario char(10) not null, 
+nivel_acesso enum('a','u') not null,
+situacao_usuario enum('b','d') not null
 );
-
 
 
