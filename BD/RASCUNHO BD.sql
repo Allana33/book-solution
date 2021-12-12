@@ -47,8 +47,9 @@ create table reserva (
 id_reserva int primary key auto_increment not null,
 data_reserva date not null,
 prazo_reserva date not null,
-situacao_reserva enum('x','x') not null, /*ponto a ser discutido na reunião*/id_livro int, constraint fk_idlivro
-foreign key (id_livro) references livro (id_livro) /*vai ter chave estrangeira para fazer ligação de usuario?*/
+situacao_reserva enum('x','x') not null, 
+/*ponto a ser discutido na reunião*/id_livro int, 
+constraint fk_idlivro foreign key (id_livro) references livro (id_livro) /*vai ter chave estrangeira para fazer ligação de usuario?*/
 );
 
 create table agendamento (
