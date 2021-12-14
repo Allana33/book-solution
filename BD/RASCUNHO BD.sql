@@ -20,8 +20,7 @@ id_empresa int primary key auto_increment not null,
 cnpj char(14) not null, 
 nome_empresa varchar(99) not null,
 telefone char(14) not null,
-email varchar(30) not null,
-senha char(10)  
+email varchar(30) not null 
 );
 
 create table livro (
@@ -86,8 +85,16 @@ foreign key (id_genero) references (id_genero)
 );
 
  create table reserva_livro( --tabela relaçao
-livro_id_reserva int primary key auto_increment
+livro_id_reserva int primary key auto_increment,
+id_livro int, 
+foreign key (id_livro) references livro (id_livro),
+id_reserva int, 
+foreign key (id_reserva) references reserva (id_reserva)
 );
  create table autor_livro( --tabela relaçao
-autor_id_livro int primary key auto_increment
+autor_id_livro int primary key auto_increment,
+id_livro int, 
+foreign key (id_livro) references livro (id_livro),
+id_autor int, 
+foreign key (id_autor) references autor (id_autor)
  ); 
