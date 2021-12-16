@@ -56,9 +56,8 @@ create table reserva (
 id_reserva int primary key auto_increment,
 data_reserva date not null,
 prazo_reserva date not null,
-situacao_reserva enum('d','i') not null, 
 id_cliente int,
-foreign key (id_cliente) references cliente (id_livro)
+foreign key (id_cliente) references cliente (id_cliente)
 );
 
 create table usuario (
@@ -78,13 +77,19 @@ data_cadastro date not null
 
 create table genero_livro( --tabela relaçao
 genero_id_livro int primary key auto_increment,
-id_livro int, 
+genero_livro id_livro int,
 foreign key (id_livro) references livro (id_livro)
 id_genero int,
 foreign key (id_genero) references (id_genero) 
 );
 
- create table reserva_livro( --tabela relaçao
+create table editora_livro(
+editora_id_livro int primary key auto_increment
+)
+
+
+
+create table reserva_livro( --tabela relaçao
 livro_id_reserva int primary key auto_increment,
 id_livro int, 
 foreign key (id_livro) references livro (id_livro),
