@@ -1,5 +1,8 @@
+
 create database athena 
-default character set utf8mb4 
+
+default character set utf8mb4
+
 default collate utf8mb4_unicode_ci;
 
 use athena;
@@ -12,32 +15,29 @@ telefone char(14) not null,
 email varchar(30) not null
 );
 
-#tabela de dados funcionario empresa, biblioteca. 
+#tabela de dados funcionario biblioteca. 
 #Talvez seja necessario apenas colocar nome e retirar sobrenome, colocando assim, nome e especificar para colocar nome completo!?
 
-create table funcionarios(
-id_funcionario int not null primary key auto_increment,
+create table funcionario(
+id int not null primary key auto_increment,
 nome_completo varchar(50) not null,
-cpf char(11) not null, 
+cpf_funcionario char(11) not null, 
 sexo enum ('m', 'f') not null,
 cargo varchar(30),
 data_admissao date not null
 );
 
-#RELACAO FUNCIONARIO PARA USUARIO.
-
-alter table funcionario add id_usuario_funcionario int not null;
-alter table funcionario add foreign key(id_usuario_funcionario) references usuario(id_usuario)
-
 #usuario
 
 create table usuario(
 id_usario int not null primary key auto_increment,
-email_login varchar(30) not null,
+email_usuario varchar(30) not null,
 senha_usuario char(10) not null, 
 nivel_acesso enum('a','u') not null, 
 situacao_usuario enum('b','d') not null
 );
+
+
 
 
 #tabela contato funcionario
