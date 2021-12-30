@@ -15,10 +15,10 @@ email varchar(30) not null,
 #tabela de dados funcionario empresa, biblioteca. 
 #Talvez seja necessario apenas colocar nome e retirar sobrenome, colocando assim, nome e especificar para colocar nome completo!?
 
-create table funcionarios(
+create table funcionario(
 id_funcionario int not null primary key auto_increment,
-nome_completo varchar(50) not null,
-cpf char(11) not null, 
+nome_completo_funcionario varchar(50) not null,
+cpf_funcionario char(11) not null, 
 sexo enum ('m', 'f') not null,
 cargo varchar(30),
 data_admissao date not null
@@ -31,6 +31,14 @@ id_contato_funcionario int not null primary key auto_increment ,
 telefone char(12),
 celular char(14) not null,
 email varchar(50) not null
+)
+
+
+create table contato_cliente(
+id_contato_cliente int not null primary key auto_increment ,
+telefone char(12),
+celular char(14) not null,
+email varchar(50) not null
 ); 
 
 #tabela cliente.
@@ -38,8 +46,8 @@ email varchar(50) not null
 create table cliente( 
 id_cliente int not null primary key auto_increment,
 sexo enum ('m', 'f') not null,
-nome_completo varchar(50) not null,
-cpf char(11) not null,
+nome_completo_cliente varchar(50) not null,
+cpf_cliente char(11) not null,
 data_cadastro date not null
 );
 
