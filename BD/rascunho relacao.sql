@@ -1,28 +1,8 @@
 #inicio de relacionamentos do banco de dados
 
-#relacionamentos usuarios
 
-alter table funcionarios add id_funcionario int not null;
-alter table funcionarios add foreign key(id_funcionario) references usuario(id_usuario)
-on delete cascade on update cascade;
 
-alter table reserva add id_usuario_reserva int not null;
-alter table reserva add foreign key(id_usuario_reserva) references usuario(id_usuario)
-on delete cascade on update cascade;
 
-alter table reserva add id_usuarioadm_reserva int not null;
-alter table reserva add foreign key(id_usuarioadm_reserva) references usuario(id_usuario)
-on delete cascade on update cascade;
-
-#relacionamentos autor
-
-alter table autor_livro add id_livro int not null;
-alter table autor-livro add foreign key(id_livro) references livro(id_livro)
-on delete cascade on update cascade;
-
-alter table autor_livro add id_autor int not null;
-alter table autor_livro add foreign key(id_autor) references autor(id_autor)
-on delete cascade on update cascade;
 
 #relacionamentos genero
 

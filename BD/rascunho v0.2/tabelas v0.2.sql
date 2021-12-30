@@ -63,7 +63,7 @@ email varchar(50) not null
 #usuario funcionario
 
 create table usuario(
-id_usario int not null primary key auto_increment,
+id_usuario int not null primary key auto_increment,
 email_login varchar(30) not null,
 senha_usuario char(10) not null, 
 nivel_acesso enum('a','u') not null, 
@@ -76,6 +76,7 @@ situacao_usuario enum('b','d') not null
 
 create table livro(
 id_livro int not null primary key auto_increment,
+codigo char (4) unique,
 titulo varchar(50) not null,  
 data_publicacao date not null,
 idioma varchar(30) not null,
@@ -97,8 +98,8 @@ nacionalidade varchar(40)
 
 #tabela relacao autor
 
-create table autor_livro( 
-autor_id_livro int not null primary key auto_increment
+create table autor_livro(
+autor_livro_id int not null primary key auto_increment
 );
 
 #tabela editora
