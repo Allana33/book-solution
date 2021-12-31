@@ -112,8 +112,8 @@ situacao_usuario enum('b','d') not null
 
 #relacionamentos usuarios
 
-alter table funcionarios add id_funcionario int not null;
-alter table funcionarios add foreign key(id_funcionario) references usuario(id_usuario)
+alter table funcionarios add id_usuario_funcionario int not null;
+alter table funcionarios add foreign key(id_usuario_funcionario) references usuario(id_usuario)
 on delete cascade on update cascade;
 
 alter table reserva add id_usuario_reserva int not null;
@@ -136,12 +136,12 @@ on delete cascade on update cascade;
 
 #relacionamentos genero
 
-alter table genero_livro add id_genero int not null;
-alter table genero_livro add foreign key(id_genero) references genero(id_genero)
+alter table genero_livro add codigo_genero_livro int not null;
+alter table genero_livro add foreign key(codigo_genero_livro) references genero(id_genero)
 on delete cascade on update cascade;
 
-alter table genero_livro add id_livro int not null;
-alter table genero_livro add foreign key(id_livro) references livro(id_livro)
+alter table genero_livro add codigo_livro_genero int not null;
+alter table genero_livro add foreign key(id_livro_genero) references livro(id_livro)
 on delete cascade on update cascade;
 
 #relacionamentos editora 
@@ -156,10 +156,10 @@ on delete cascade on update cascade;
 
 #relacionamentos lista
 
-alter table lista add id_livro int not null;
-alter table lista add foreign key(id_livro) references livro(id_livro)
+alter table lista add codigo_livro_lista int not null;
+alter table lista add foreign key(codigo_livro_lista) references livro(codigo_livro)
 on delete cascade on update cascade;
 
-alter table lista add id_usuario int not null;
-alter table lista add foreign key(id_usuario) references livro(id_livro)
+alter table lista add id_cliente_lista int not null;
+alter table lista add foreign key(id_cliente_lista) references cliente(id_cliente)
 on delete cascade on update cascade;
