@@ -70,7 +70,7 @@ volume int,
 edicao int,
 data_registro date not null,
 paginas int, 
-descricao varchar(2440),
+descricao text,
 status enum('d','i') not null
 );
 
