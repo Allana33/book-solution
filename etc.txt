@@ -4,3 +4,7 @@ insert  into usuarios (usuario, email_usuario, senha_usuario, situacao_usuario) 
 
 https://lottiefiles.com/66367-talk-about-money-background
 
+
+INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `senha_usuario`) VALUES
+(2, 'thor', 'thor', '123');
+COMMIT;

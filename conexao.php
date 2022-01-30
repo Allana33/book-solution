@@ -4,15 +4,15 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $dbname = "athena";
-//$port = "1245"; caso tenha alguma porta para banco de dados/localhost
+//$port = 3306;
 
-try {
+try{
+    //Conexão com a porta
+    //$conn = new PDO("mysql:host=$host;port=$port;dbname=" . $dbname, $user, $pass);
 
-	$conn = new PDO("mysql:host=$host;dbname=" . $dbname, $user, $pass);
-	echo "";
-
-}catch(PDOException $erro){
-
-	echo "" . $erro->getMessage();
-
+   // Conexão sem a porta
+    $conn = new PDO("mysql:host=$host;dbname=" . $dbname, $user, $pass);
+    //echo "Conexão com banco de dados realizado com sucesso!";
+}catch(PDOException $err){
+    //echo "Erro: Conexão com banco de dados não realizado com sucesso. Erro gerado " . $err->getMessage();
 }
