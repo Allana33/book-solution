@@ -5,7 +5,7 @@
 
 	private $id_usuario, $email_usuario, $senha_usuario, $situacao_usuario;
 
-	public function postId_Usuario(){
+	public function getId_Usuario(){
 		return $this->id_usuario;
 	}
 
@@ -13,7 +13,7 @@
 		$this->id_usuario = $id_usuario;	
 	}
 	
-	public function postEmail_Usuario(){
+	public function getEmail_Usuario(){
 		return $this->email_usuario;
 	}
 
@@ -21,7 +21,7 @@
 		$this->email_usuario = $email_usuario;	
 	}
 
-	public function postSenha_Usuario(){
+	public function getSenha_Usuario(){
 		return $this->senha_usuario;
 	}
 
@@ -29,7 +29,7 @@
 		$this->senha_usuario = $senha_usuario;	
 	}
 
-    public function postSituacao_usuario(){
+    public function getSituacao_usuario(){
 		return $this->situacao_usuario;
 	}
 

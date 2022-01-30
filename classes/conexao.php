@@ -9,6 +9,7 @@ class Conexao{
 				return self::$instancia;
 			}else{
 				return self::$instancia;
+				
 		}
 	}
 }

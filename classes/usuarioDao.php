@@ -1,40 +1,30 @@
 <?php
 include "conexao.php";
 
-class LivroDao{
-    public function loginUsuario(Livro $lib){
+class UsuarioDao{
+
+    public function loginUsuario(Usuario $user){
         $sql = "";
         $banco= new Conexao();
         $con = $banco->getConexao();
         $stm = $con->prepare($sql);
-        $stm-> bindValue(1, $lib->getNome());
-        $stm-> bindValue(2, $lib->getCodigo());
-        $stm-> bindValue(3, $lib->getUrl());
+        $stm-> bindValue(1, $user->getEmail_Usuario());
+        $stm-> bindValue(2, $user->getSenha_Usuario());
         $result = $stm->execute();
 
         if($result){
-            echo "<span class='help-block' style='color: Blue;'>Cadastro efetuado com sucesso!</span>";
+            echo "<span class='help-block' style='color: Blue;'>Login efetuado com sucesso!</span>";
         }else {
-            echo "<span class='help-block' style='color: Red;'>Erro no cadastro!</span>";
+
         }
     }
 
-	public function buscarLivro(){
-		$sql = "select * from livros";
-		
-		$banco= new Conexao();
-		$con = $banco->getConexao();
-		
-		$stm = $con->prepare($sql);
-		$stm->execute();
 
-		if($stm->rowCount()>0){
-			$result = $stm->fetchAll(\PDO::FETCH_ASSOC);
-			return $result;
-		}else {
-            return 0;
-        }
 
-	}
-}
 
+
+
+
+
+
+}//fim classe
