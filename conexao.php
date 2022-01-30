@@ -9,10 +9,10 @@ $dbname = "athena";
 try {
 
 	$conn = new PDO("mysql:host=$host;dbname=" . $dbname, $user, $pass);
-	echo "Bem vindo.";
+	echo "";
 
 }catch(PDOException $erro){
 
-	echo "Em manutenção." . $erro->getMessage();
+	echo "" . $erro->getMessage();
 
 }

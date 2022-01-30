@@ -1,7 +1,6 @@
 <?php 
 
-include_once 'login.php';
-
+include'login.php';
 
 ?>
 
@@ -13,7 +12,7 @@ include_once 'login.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="formatacao.css">
+    <link rel="stylesheet" href="">
     <title>Login Athena</title>
     
 </head>
@@ -22,9 +21,9 @@ include_once 'login.php';
     <h1>Entrar</h1>
     <form action="" method="POST">
 
-        <input type="email" placeholder="Email" name="email_usuario">
+        <input type="text" placeholder="Usuário" name="usuario">
         <input type="password" placeholder="Senha" name="senha_usuario">
-        <input type="submit" value="Login" name="onlogin">
+        <input type="submit" value="Login" name="login">
 
     </form>
 </div>

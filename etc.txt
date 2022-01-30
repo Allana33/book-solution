@@ -1,0 +1,6 @@
+use athena;
+insert  into usuarios (usuario, email_usuario, senha_usuario, situacao_usuario) values ('thor','thor@thor.com','1234','d');
+
+
+https://lottiefiles.com/66367-talk-about-money-background
+
