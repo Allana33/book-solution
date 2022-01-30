@@ -12,12 +12,8 @@
     
   </div>
 
-  <!--<div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" id="pinput">Não sou um robô</label>
-  </div> -->
-
   <button type="submit" id="a01" value="cadastrar" name="botao">Cadastrar</button>
+
 </form>
 
 </div>

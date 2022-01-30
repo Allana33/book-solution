@@ -43,7 +43,7 @@ data_cadastro date not null
 
 create table usuario(
 id_usuario int not null primary key auto_increment,
-email_login varchar(30) not null,
+email_usuario varchar(30) not null,
 senha_usuario char(10) not null, 
 situacao_usuario enum('b','d') not null
 );

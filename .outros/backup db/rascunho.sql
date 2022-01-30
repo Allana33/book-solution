@@ -100,7 +100,7 @@ id_lista int not null primary key auto_increment
 
 create table usuario(
 id_usario int not null primary key auto_increment,
-email_login varchar(30) not null,
+email_usuario varchar(30) not null,
 senha_usuario char(10) not null, 
 nivel_acesso enum('a','u') not null, 
 situacao_usuario enum('b','d') not null

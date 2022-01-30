@@ -1,7 +1,43 @@
-<?php include "cabecalho.php";  
-include "menu.php";
-include "rodape.php"; ?>
+<?php 
+
+
+?>
+
 
 <body>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formatacao.css">
+    <title>Login Tcc</title>
     
+</head>
+<body>
+    <div id="corpo-form-Cad">
+    <h1>Entrar</h1>
+    <form method="POST">
+        
+        <input type="email" placeholder="Usuário" name="email">
+        <input type="password" placeholder="Senha" name="senha">
+        <input type="submit" value="ACESSAR">
+
+    </form>
+</div>
+
+<?php
+
+
+?>
+
+</body>
+
+
+</html>
+
+
+
 </body>
