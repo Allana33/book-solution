@@ -17,13 +17,13 @@ if ($livroDao->buscarLivro() == 0){
 
 else {
     
-    foreach ($livroDao->buscarLivro() as $resultado){
+    foreach ($livroDao->buscarLivro() as $resul){
      
         echo "<div class='card-text' style='width:240px';>";
         echo "<img src=".$resultado['url']." class='img-thumbnail' alt='X' class='card-img-top' alt='not found' style='width: 240px'; height: 300px';>";
         echo "<div class='card' style='width: 212px';>";
-        echo "<h5 class='card-title'>".$resultado['nome']."</h5>";
-        echo "<p class='card-text'> Cód ".$resultado['codigo']."</p>";
+        echo "<h5 class='card-title'>".$resul['nome']."</h5>";
+        echo "<p class='card-text'> Cód ".$resul['codigo']."</p>";
         echo "</div>";
         echo "</div>";
         

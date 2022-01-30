@@ -1,4 +1,0 @@
-<?php
-
-define[HOST]
-define

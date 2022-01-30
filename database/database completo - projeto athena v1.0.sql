@@ -41,7 +41,7 @@ cpf_cliente char(11) not null,
 data_cadastro date not null
 );
 
-create table usuario(
+create table usuarios(
 id_usuario int not null primary key auto_increment,
 email_usuario varchar(30) not null,
 senha_usuario char(10) not null, 
@@ -111,7 +111,7 @@ id_lista int not null primary key auto_increment
 #relacao funcionario usuario do sistema
 
 alter table funcionario add id_usuario_funcionario int not null;
-alter table funcionario add foreign key(id_usuario_funcionario) references usuario(id_usuario)
+alter table funcionario add foreign key(id_usuario_funcionario) references usuarios(id_usuario)
 on delete cascade on update cascade;
 
 #relacao contato funcionario

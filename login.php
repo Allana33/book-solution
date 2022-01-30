@@ -1,11 +1,11 @@
 <?php
 
-include 'classes/conexao.php';
+include_once 'conexao.php';
 
-if (empty($_POST['email_usuario']) || empty($_POST['senha_usuario'])) {
-               
-    header('Location: index');
+$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-    exit();
+if (!empty($dados['onlogin'])) {
 
-    }
+    var_dump($dados);
+    
+}

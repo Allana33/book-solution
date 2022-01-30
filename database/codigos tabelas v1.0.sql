@@ -51,7 +51,7 @@ data_cadastro date not null
 
 
 
-create table usuario(
+create table usuarios(
 id_usuario int not null primary key auto_increment,
 email_usuario varchar(30) not null,
 senha_usuario char(10) not null, 

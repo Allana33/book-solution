@@ -1,15 +1,15 @@
 <?php
 	
-	class Livro{
+	class Usuario{
 
 
 	private $id_usuario, $email_usuario, $senha_usuario, $situacao_usuario;
 
-	public function getId_Usuario(){
+	public function setId_Usuario(){
 		return $this->id_usuario;
 	}
 
-	public function setId_Usuario($id_usuario){
+	public function getId_Usuario($id_usuario){
 		$this->id_usuario = $id_usuario;	
 	}
 	

@@ -1,3 +1,10 @@
+<?php 
+
+include_once 'login.php';
+
+
+?>
+
 <body>
 
 <!DOCTYPE html>
@@ -13,11 +20,11 @@
 <body>
     <div id="corpo-form-Cad">
     <h1>Entrar</h1>
-    <form action="login.php" method="POST">
+    <form action="" method="POST">
 
-        <input type="email" placeholder="Usuário" name="email_usuario">
+        <input type="email" placeholder="Email" name="email_usuario">
         <input type="password" placeholder="Senha" name="senha_usuario">
-        <input type="submit" value="acesso">
+        <input type="submit" value="Login" name="onlogin">
 
     </form>
 </div>
