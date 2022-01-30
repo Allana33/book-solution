@@ -16,7 +16,7 @@
 <body>
     <div id="corpo-form">
     <h1>Cadastrar</h1>
-    <form method="POST">
+    <form method="GET">
         <input type="text" name="nome" placeholder="Nome Completo" maxlength="30">
         <input type="text" name="telefone" placeholder="Telefone" maxlength="30">
         <input type="email" name="email" placeholder="Usuário" maxlength="40">
@@ -28,7 +28,7 @@
 
 <?php
 //verificar se clicou no botao
-if(isset($_POST['nome']))
+if(isset($_GET['nome']))
 {
     $nome = addslashes($_POST['nome']);
     $telefone = addslashes($_POST['telefone']);
