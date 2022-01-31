@@ -7,6 +7,9 @@
 .box-login {
     z-index: 1;
     text-align: center;
+    margin-top: 45vh;
+    left: 0;
+    right: 0;
 }
 
 
@@ -18,13 +21,17 @@
 
 .lottie-bg {
     z-index: -1;
-    width: 100%;
+    width: auto;
     height: 100%;
     left: 0;
     right: 0;
     position: fixed;
     margin-left: auto;
     margin-right: auto;
+    left:0; 
+    right:0; 
+    top:0; 
+    bottom:0;
 }
 
 @media (min-width: 1940px){
