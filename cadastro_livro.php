@@ -7,7 +7,7 @@ $layout->index();
 // \/ daqui para baixo é só o cadastro, mysql etc. 
 
 include 'classes/Livro.php';
-include 'classes/LivroDao.php';
+include 'LivroDao.php';
 
 if (isset($_GET['nome'])){
 $nome = $_GET['nome'];

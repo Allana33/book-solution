@@ -5,7 +5,7 @@
  <div class="card-group">
 <?php
 
-include 'classes/LivroDao.php';
+include 'LivroDao.php';
 
 $livroDao = new LivroDao();
 
@@ -17,13 +17,13 @@ if ($livroDao->buscarLivro() == 0){
 
 else {
     
-    foreach ($livroDao->buscarLivro() as $resul){
+    foreach ($livroDao->buscarLivro() as $result){
      
         echo "<div class='card-text' style='width:240px';>";
-        echo "<img src=".$resultado['url']." class='img-thumbnail' alt='X' class='card-img-top' alt='not found' style='width: 240px'; height: 300px';>";
+        echo "<img src=".$result['url']." class='img-thumbnail' alt='X' class='card-img-top' alt='not found' style='width: 240px'; height: 300px';>";
         echo "<div class='card' style='width: 212px';>";
-        echo "<h5 class='card-title'>".$resul['nome']."</h5>";
-        echo "<p class='card-text'> Cód ".$resul['codigo']."</p>";
+        echo "<h5 class='card-title'>".$result['nome']."</h5>";
+        echo "<p class='card-text'> Cód ".$result['codigo']."</p>";
         echo "</div>";
         echo "</div>";
         

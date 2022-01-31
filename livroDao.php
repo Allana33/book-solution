@@ -5,8 +5,8 @@ class LivroDao{
     public function cadastrarLivro(Livro $lib){
         $sql = "insert into livros(nome, codigo, url) values(?, ?, ?)";
         $banco= new Conexao();
-        $con = $banco->getConexao();
-        $stm = $con->prepare($sql);
+        $conn = $banco->getConexao();
+        $stm = $conn->prepare($sql);
         $stm-> bindValue(1, $lib->getNome());
         $stm-> bindValue(2, $lib->getCodigo());
         $stm-> bindValue(3, $lib->getUrl());
@@ -23,7 +23,7 @@ class LivroDao{
 		$sql = "select * from livros";
 		
 		$banco= new Conexao();
-		$con = $banco->getConexao();
+		$conn = $banco->getConexao();
 		
 		$stm = $con->prepare($sql);
 		$stm->execute();

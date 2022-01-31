@@ -8,6 +8,7 @@ include_once 'login.php';
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-ico">
+    <link rel="stylesheet" href="assets/css/index.css">
     <title>Login</title>
 </head>
 

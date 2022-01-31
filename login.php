@@ -11,12 +11,11 @@ if (!empty($dados['Login'])) {
     if($usuario){
             $_SESSION['id'] = $usuario['id_usuario'];
             $_SESSION['nome'] = $usuario['usuario'];
-            header("Location: dashboard.php");
+            header("Location: home");
     }else{
         $_SESSION['msg'] = "<p style='color: #ff0000'>Erro: Usuário ou senha inválida!</p>";
     }
 
-    
 }
 
 if(isset($_SESSION['msg'])){
@@ -27,9 +26,9 @@ if(isset($_SESSION['msg'])){
     function logarUsuario($conn,$email, $senha)
     {
         try {
-            $sql  = "SELECT * FROM usuarios WHERE usuario = :email AND senha_usuario = :senha";
+            $sql  = "SELECT * FROM usuarios WHERE usuario = :email_usuario AND senha_usuario = :senha";
             $stmt = $conn->prepare($sql);
-            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':email_usuario', $email);
             $stmt->bindParam(':senha', $senha);
             $stmt->execute();
             return json_decode(json_encode($stmt->fetch()), true);
