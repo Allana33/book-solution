@@ -13,30 +13,49 @@ include_once 'login.php';
 </head>
 
 <body>
-
     <div class="lottie-bg">
-
-        <lottie-interactive path="assets/animations/bookbg.json"  background="transparent" speed="0.5" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
-
-    </div>        
+        <lottie-interactive path="assets/animations/bookbg6.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
+    </div>   
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required name="usuario" value="<?php if(isset($dados['usuario'])){ echo $dados['usuario']; } ?>">
+          <span></span>
+          <label>Usuário</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required name="senha_usuario" value="<?php if(isset($dados['senha_usuario'])){ echo $dados['senha_usuario']; } ?>">
+          <span></span>
+          <label>Senha</label>
+        </div>
+        <div class="pass">Esqueceu senha?</div>
+        <input type="submit" value="Login" name="Login" v>
+        <div class="signup_link">
+         <!-- Not a member? <a href="#">Signup</a>-->
+        </div>
+      </form>
+    </div>     
         
-            <div class="box-login">
-            <h1>Login</h1> 
+<!--<div class="box-login">
+        <h1>Login</h1>
+
+        <div class="box-form">
 
                 <form method="POST" action="">
 
                    <label>Usuário</label>
-                      <input type="text" name="usuario" placeholder="Usuário" value="<?php if(isset($dados['usuario'])){ echo $dados['usuario']; } ?>"><br><br>
+                      <input type="text" name="usuario" placeholder="Usuário" value=""><br><br>
 
                     <label>Senha</label>
 
-                      <input type="password" name="senha_usuario" placeholder="Senha" value="<?php if(isset($dados['senha_usuario'])){ echo $dados['senha_usuario']; } ?>"><br><br>
+                      <input type="password" name="senha_usuario" placeholder="Senha" value=""><br><br>
 
-                      <input type="submit" value="Acessar" name="Login">
+                      <input type="submit" value="Entrar" name="Login">
 
                 </form>
-                
-</div>
+        </div>
+</div>-->
    
   
         <!--  Custom Scripts       -->
