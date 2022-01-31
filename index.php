@@ -12,26 +12,13 @@ include_once 'login.php';
     <title>Login</title>
 </head>
 
-
-
-
 <body>
+
     <div class="lottie-bg">
 
-        <lottie-interactive path="assets/animations/bg.json"  background="transparent" speed="0.5" loop  autoplay style="left:0; right:0; position: absolute;">
+        <lottie-interactive path="assets/animations/ondasbg.json"  background="transparent" speed="0.5" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
 
-    </div>
-
-
-
-
-
-
-             
-            
-          
-
-             
+    </div>        
         
             <div class="box-login">
             <h1>Login</h1> 
@@ -51,12 +38,7 @@ include_once 'login.php';
                 
 </div>
    
-     
-        
-    
-
-
-    
+  
         <!--  Custom Scripts       -->
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
