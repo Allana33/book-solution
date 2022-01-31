@@ -16,7 +16,7 @@ include_once 'login.php';
 
     <div class="lottie-bg">
 
-        <lottie-interactive path="assets/animations/ondasbg.json"  background="transparent" speed="0.5" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
+        <lottie-interactive path="assets/animations/bookbg.json"  background="transparent" speed="0.5" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
 
     </div>        
         
