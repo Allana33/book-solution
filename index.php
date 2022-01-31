@@ -14,7 +14,7 @@ include_once 'login.php';
 
 <body>
     <div class="lottie-bg">
-        <lottie-interactive path="assets/animations/bookbg6.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
+        <lottie-interactive path="assets/animations/bookbg2.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
     </div>   
     <div class="center">
       <h1>Login</h1>
@@ -32,7 +32,7 @@ include_once 'login.php';
         <div class="pass">Esqueceu senha?</div>
         <input type="submit" value="Login" name="Login" v>
         <div class="signup_link">
-         <!-- Not a member? <a href="#">Signup</a>-->
+         <!-- Não é membro? <a href="#">Cadastre-se</a>-->
         </div>
       </form>
     </div>     
