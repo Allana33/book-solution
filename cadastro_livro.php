@@ -1,7 +1,7 @@
 <?php 
 include "Layout.php";
 $layout = new Layout();
-$layout->conteudo = "formulario";
+$layout->conteudo = "formulario_livro";
 $layout->index();
 
 // \/ daqui para baixo é só o cadastro, mysql etc. 

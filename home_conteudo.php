@@ -17,12 +17,9 @@ include "rodape.php"; ?>
 
 
 <body>
-    <h1>Bem vindo!</h1>
+
+    <h1>Bem vindo!</h1>-
 
     <a href="sair.php">Sair</a>
-
-
-
-
 
 </body>

@@ -29,7 +29,8 @@ include_once 'login.php';
           <span></span>
           <label>Senha</label>
         </div>
-        <div class="pass">Esqueceu senha?</div>
+        <a class="pass">Esqueceu senha?</a>
+        <div class="pass"></div>
         <input type="submit" value="Login" name="Login" v>
         <div class="signup_link">
          <!-- Não é membro? <a href="#">Cadastre-se</a>-->
