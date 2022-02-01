@@ -10,29 +10,30 @@ $layout->index();
 include "conexao.php";
 
 
-$dadoslivro = filter_input_array(INPUT_GET, FILTER_DEFAULT);
+$dadoslivro = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 
 if (!empty($dadoslivro['cadastro'])) {
     $livro = cadastroLivro($conn,$dadoslivro['titulo']);
     if($livro){
-            $_GET['id'] = $livro['id_livro'];
+        
+            $_POST['id'] = $livro['id_livro']; 
 
     }else{
-        $_GET['msg'] = "<p style='color: #ff0000'>Erro: qqdeu!</p>";
+        $_POST['msg'] = "<p style='color: #ff0000'>Erro: qqdeu!</p>";
     }
 
 }
 
-if(isset($_GET['msg'])){
-    echo $_GET['msg'];
-    unset($_GET['msg']);
+if(isset($_POST['msg'])){
+    echo $_POST['msg'];
+    unset($_POST['msg']);
 }
 
 function cadastroLivro($conn,$livro)
 {
     try {
-        $sql  = "INSERT INTO livro (titulo) VALUES (':titulo')";
+        $sql  = "INSERT INTO livro (titulo) VALUES (:titulo)";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':titulo', $livro);
         $stmt->execute();
