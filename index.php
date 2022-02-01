@@ -1,6 +1,14 @@
 <?php
+
+session_start();
+ob_start();
+
+
 include_once 'conexao.php';
-include_once 'login.php';
+//include_once 'login.php';
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,8 +23,9 @@ include_once 'login.php';
 <body>
     <div class="lottie-bg">
         <lottie-interactive path="assets/animations/bookbg2.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
-    </div>   
+    </div>       
     <div class="center">
+      
       <h1>Login</h1>
       <form method="post">
         <div class="txt_field">
@@ -31,10 +40,51 @@ include_once 'login.php';
         </div>
         <a class="pass">Esqueceu senha?</a>
         <div class="pass"></div>
-        <input type="submit" value="Login" name="Login" v>
+        <div class='txt_field' style='color: #ff0000'><p>
+<?php
+
+$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+
+if (!empty($dados['Login'])) {
+    $usuario = logarUsuario($conn,$dados['usuario'],$dados['senha_usuario']);
+    if($usuario){
+            $_SESSION['id'] = $usuario['id_usuario'];
+            $_SESSION['nome'] = $usuario['usuario'];
+            header("Location: home");
+    }else{
+        $_SESSION['msg'] = "Erro: Usuário ou senha inválida!";
+    }
+
+}
+
+if(isset($_SESSION['msg'])){
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+}
+
+    function logarUsuario($conn,$email, $senha)
+    {
+        try {
+            $sql  = "SELECT * FROM usuarios WHERE usuario = :email_usuario AND senha_usuario = :senha";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':email_usuario', $email);
+            $stmt->bindParam(':senha', $senha);
+            $stmt->execute();
+            return json_decode(json_encode($stmt->fetch()), true);
+        }
+        catch (PDOException $e) {
+            echo "Error:" . $e->getMessage();
+        }
+    }
+
+?>
+</p>
+</div>
+        <input type="submit" value="Login" name="Login">        
         <div class="signup_link">
          <!-- Não é membro? <a href="#">Cadastre-se</a>-->
-        </div>
+        </div>        
       </form>
     </div>     
         
