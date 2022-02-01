@@ -1,7 +1,7 @@
 <?php
 
 
-include "conexao.php";
+/*include "conexao.php";
 
 
 $dadoslivro = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -38,3 +38,4 @@ function cadastroLivro($conn,$dadoslivro)
         echo "Error:" . $e->getMessage();
     }
 }
+*/

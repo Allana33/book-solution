@@ -10,33 +10,31 @@ $layout->index();
 include "conexao.php";
 
 
-$dadoslivro = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+$dadoslivro = filter_input_array(INPUT_GET, FILTER_DEFAULT);
 
 
 if (!empty($dadoslivro['cadastro'])) {
-    $livro = cadastroLivro($conn,$dadoslivro['titulo'],$dadoslivro['codigo']);
+    $livro = cadastroLivro($conn,$dadoslivro['titulo']);
     if($livro){
-            $_POST['titulo'] = $livro['titulo'];
-            $_POST['codigo'] = $livro['codigo'];
+            $_GET['id'] = $livro['id_livro'];
 
     }else{
-        $_POST['msg'] = "<p style='color: #ff0000'>Erro: qqdeu!</p>";
+        $_GET['msg'] = "<p style='color: #ff0000'>Erro: qqdeu!</p>";
     }
 
 }
 
-if(isset($_POST['msg'])){
-    echo $_POST['msg'];
-    unset($_POST['msg']);
+if(isset($_GET['msg'])){
+    echo $_GET['msg'];
+    unset($_GET['msg']);
 }
 
-function cadastroLivro($conn,$dadoslivro)
+function cadastroLivro($conn,$livro)
 {
     try {
-        $sql  = "INSERT INTO livro (titulo, codigo) VALUES (':titulo', ':codigo')";
+        $sql  = "INSERT INTO livro (titulo) VALUES (':titulo')";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':titulo', $titulo);
-        $stmt->bindParam(':codigo', $codigo);
+        $stmt->bindParam(':titulo', $livro);
         $stmt->execute();
         return json_decode(json_encode($stmt->fetch()), true);
     }
