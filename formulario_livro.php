@@ -2,17 +2,16 @@
 
 <h2 class="h2titulo">CADASTRO DE LIVRO</h2>
 
-<form method="GET" action="cadastro_livro.php">
+<form method="POST" action="cadastro_livro.php">
 
   <div class="mb-3">
     
-    <input type="text" required="required"  name="nome" placeholder="Nome">
-    <input type="number" required="required"  name="codigo" placeholder="codigo">
-    <input type="url" required="required"  name="url" placeholder="url da imagem">
+    <input type="text" required="required"  name="titulo" value="titulo" placeholder="Titulo">
+    <input type="number" required="required"  name="codigo" value="titulo" placeholder="Codigo">
     
   </div>
 
-  <button type="submit" id="a01" value="cadastrar" name="botao">Cadastrar</button>
+  <button type="submit" value="cadastro" name="cadastro">Cadastrar</button>
 
 </form>
 

@@ -7,7 +7,7 @@
 
 include 'LivroDao.php';
 
-$livroDao = new LivroDao();
+
 
 if ($livroDao->buscarLivro() == 0){
 

@@ -6,11 +6,11 @@
 	private $nome,$codigo,$url;
 
 	public function getNome(){
-		return $this->nome;
+		return $this->titulo;
 	}
 
-	public function setNome($nome){
-		$this->nome = $nome;	
+	public function setNome($titulo){
+		$this->nome = $titulo;	
 	}
 	
 	public function getCodigo(){
