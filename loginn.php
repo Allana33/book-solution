@@ -1,7 +1,12 @@
 <?php
+
+
+
+
+include_once 'conexao.php';
+
 session_start();
 ob_start();
-
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -13,27 +18,38 @@ if (!empty($dados['Login'])) {
             $_SESSION['nome'] = $usuario['usuario'];
             header("Location: home");
     }else{
-        $_SESSION['msg'] = "<p style='color: #ff0000'>Erro: Usuário ou senha inválida!</p>";
+        $_SESSION['msg'] = "Erro: Usuário ou senha inválida!";
+        header("Location: index");
     }
 
-}
-
-if(isset($_SESSION['msg'])){
-    echo $_SESSION['msg'];
-    unset($_SESSION['msg']);
 }
 
     function logarUsuario($conn,$email, $senha)
     {
         try {
-            $sql  = "SELECT * FROM usuarios WHERE usuario = :email_usuario AND senha_usuario = :senha";
+            $sql  = "SELECT * FROM usuarios WHERE usuario = :email_usuario";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':email_usuario', $email);
-            $stmt->bindParam(':senha', $senha);
             $stmt->execute();
-            return json_decode(json_encode($stmt->fetch()), true);
+            if($usuario = $stmt->fetch()){
+                if(password_verify($senha,$usuario['senha_usuario'])){
+
+                    return json_decode(json_encode($usuario), true);
+
+                }
+                
+            }
+            
         }
         catch (PDOException $e) {
             echo "Error:" . $e->getMessage();
         }
+
+        return null;
     }
+
+
+    /*if(isset($_SESSION['msg'])){
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+}*/

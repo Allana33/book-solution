@@ -35,7 +35,7 @@ function cadastroLivro($conn,$livro)
     try {
         $sql  = "INSERT INTO livro (titulo) VALUES (:titulo)";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':titulo', $livro);
+        $stmt->bindParam(':titulo', $livro, PDO::PARAM_STR); //PARAM_INT < NUMERO // PARAM_XYZ Especificar tipo.
         $stmt->execute();
         return json_decode(json_encode($stmt->fetch()), true);
     }

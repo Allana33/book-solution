@@ -4,12 +4,8 @@ session_start();
 ob_start();
 
 
-include_once 'conexao.php';
-//include_once 'login.php';
-
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,7 +23,7 @@ include_once 'conexao.php';
     <div class="center">
       
       <h1>Login</h1>
-      <form method="post">
+      <form method="post" action="loginn.php">
         <div class="txt_field">
           <input type="text" required name="usuario" value="<?php if(isset($dados['usuario'])){ echo $dados['usuario']; } ?>">
           <span></span>
@@ -41,72 +37,22 @@ include_once 'conexao.php';
         <a class="pass">Esqueceu senha?</a>
         <div class="pass"></div>
         <div class='txt_field' style='color: #ff0000'><p>
-<?php
-
-$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-
-if (!empty($dados['Login'])) {
-    $usuario = logarUsuario($conn,$dados['usuario'],$dados['senha_usuario']);
-    if($usuario){
-            $_SESSION['id'] = $usuario['id_usuario'];
-            $_SESSION['nome'] = $usuario['usuario'];
-            header("Location: home");
-    }else{
-        $_SESSION['msg'] = "Erro: Usuário ou senha inválida!";
-    }
-
-}
+<?php 
 
 if(isset($_SESSION['msg'])){
-    echo $_SESSION['msg'];
-    unset($_SESSION['msg']);
+  echo $_SESSION['msg'];
+  unset($_SESSION['msg']);
 }
 
-    function logarUsuario($conn,$email, $senha)
-    {
-        try {
-            $sql  = "SELECT * FROM usuarios WHERE usuario = :email_usuario AND senha_usuario = :senha";
-            $stmt = $conn->prepare($sql);
-            $stmt->bindParam(':email_usuario', $email);
-            $stmt->bindParam(':senha', $senha);
-            $stmt->execute();
-            return json_decode(json_encode($stmt->fetch()), true);
-        }
-        catch (PDOException $e) {
-            echo "Error:" . $e->getMessage();
-        }
-    }
-
 ?>
-</p>
-</div>
+
+        </p></div>
         <input type="submit" value="Login" name="Login">        
         <div class="signup_link">
          <!-- Não é membro? <a href="#">Cadastre-se</a>-->
         </div>        
       </form>
-    </div>     
-        
-<!--<div class="box-login">
-        <h1>Login</h1>
-
-        <div class="box-form">
-
-                <form method="POST" action="">
-
-                   <label>Usuário</label>
-                      <input type="text" name="usuario" placeholder="Usuário" value=""><br><br>
-
-                    <label>Senha</label>
-
-                      <input type="password" name="senha_usuario" placeholder="Senha" value=""><br><br>
-
-                      <input type="submit" value="Entrar" name="Login">
-
-                </form>
-        </div>
-</div>-->
+    </div>
    
   
         <!--  Custom Scripts       -->
