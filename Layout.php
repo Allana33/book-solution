@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+ob_start();
+
 class Layout
 {
    public $cabecalho;
@@ -22,6 +26,7 @@ class Layout
 
    }
    public function conteudo($conteudo){
+      
     include $conteudo.".php";
    }
 

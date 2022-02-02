@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-ob_start();
 
 include "Layout.php";
 $layout = new Layout();

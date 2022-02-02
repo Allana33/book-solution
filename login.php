@@ -1,5 +1,7 @@
 <?php
 
+//die(password_hash("123", PASSWORD_DEFAULT)); hash para senha, colocar no DB
+
 session_start();
 ob_start();
 
@@ -12,7 +14,7 @@ if (!empty($dados['Login'])) {
     $usuario = logarUsuario($conn,$dados['usuario'],$dados['senha_usuario']);
     if($usuario){
             $_SESSION['id'] = $usuario['id_usuario'];
-            $_SESSION['nome'] = $usuario['usuario'];
+            $_SESSION['usuario'] = $usuario['usuario'];
             header("Location: home.php");
     }else{
         $_SESSION['msg'] = "Erro: Usuário ou senha inválida!";

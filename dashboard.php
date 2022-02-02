@@ -1,6 +1,5 @@
 <?php
-session_start();
-ob_start();
+
 include_once 'conexao.php';
 
 if((!isset($_SESSION['id'])) AND (!isset($_SESSION['usuario']))){
