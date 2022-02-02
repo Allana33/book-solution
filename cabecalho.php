@@ -4,10 +4,10 @@ session_start();
 ob_start();
 
 
-if((!isset($_SESSION['id'])) AND (!isset($_SESSION['usuario']))){
+/*if((!isset($_SESSION['id'])) AND (!isset($_SESSION['usuario']))){
     $_SESSION['msg'] = "<p style='color: #ff0000'>Erro: Necessário realizar o login para acessar a página!</p>";
-    header("Location: index");
-}
+    header("Location: index.php");
+}*/
 
 ?>
 

@@ -1,10 +1,14 @@
-<?php
+<?php 
 
 session_start();
 ob_start();
 
 
+
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,7 +27,7 @@ ob_start();
     <div class="center">
       
       <h1>Login</h1>
-      <form method="post" action="loginn.php">
+      <form method="POST" action="login.php">
         <div class="txt_field">
           <input type="text" required name="usuario" value="<?php if(isset($dados['usuario'])){ echo $dados['usuario']; } ?>">
           <span></span>
