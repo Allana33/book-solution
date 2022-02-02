@@ -6,21 +6,24 @@ $layout->index();
 
 // \/ daqui para baixo é só o cadastro, mysql etc. 
 
-
 include "conexao.php";
 
 
 $dadoslivro = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 
-if (!empty($dadoslivro['cadastro'])) {
+
+
+if (isset($dadoslivro['cadastro'])) {
+
     $livro = cadastroLivro($conn,$dadoslivro['titulo']);
     if($livro){
-        
-            $_POST['id'] = $livro['id_livro']; 
 
+            $_POST['msg'] = "<p style='color: #00ff00>Erro: Cadastrou mas nao tem erro?!</p>";
+            
     }else{
-        $_POST['msg'] = "<p style='color: #ff0000'>Erro: qqdeu!</p>";
+
+        $_POST['msg'] = "<p style='color: #ff0000'>Erro: Cadastrou mas nao tem erro?!</p>";
     }
 
 }
