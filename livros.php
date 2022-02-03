@@ -1,6 +1,6 @@
 <?php 
-include "Layout.php";
+include "Layout";
 $layout = new Layout();
-$layout->conteudo = "livro_conteudo";
+$layout->conteudo = "livros_conteudo";
 $layout->index();
 

@@ -1,8 +1,9 @@
 <?php
-
+// Session start para todos arquivos
 session_start();
 ob_start();
 
+// class layout para podermos definir o conteudo 1 para todos, conteudo de cada arquivo.
 class Layout
 {
    public $cabecalho;

@@ -2,7 +2,7 @@
 
 <h2 class="h2titulo">CADASTRO DE LIVRO</h2>
 
-<form method="POST" action="cadastro_livro.php">
+<form method="POST" action="cadastro_livro">
 
   <div class="mb-3">
     

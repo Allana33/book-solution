@@ -1,6 +1,6 @@
 
 <body>
 
-    <a href="sair.php">Sair</a>
+    <a href="sair">Sair</a>
 
 </body>

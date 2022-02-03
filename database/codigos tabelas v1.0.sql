@@ -4,8 +4,6 @@ default collate utf8mb4_unicode_ci;
 
 use athena;
 
-
-
 create table biblioteca(
 nome_biblioteca varchar(50) not null,
 telefone char(14) not null,

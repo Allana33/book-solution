@@ -33,16 +33,16 @@ email varchar(50) not null
 create table contato_cliente(
 id_contato_cliente int not null primary key auto_increment,
 telefone char(12),
-celular char(14) not null,
-email varchar(50) not null
+celular char(14) not,
+email varchar(50) not
 ); 
 
 
 
 create table cliente( 
 id_cliente int not null primary key auto_increment,
-sexo enum ('m', 'f') not null,
-nome_completo_cliente varchar(50) not null,
+sexo enum ('m', 'f'),
+nome_completo_cliente varchar(50),
 cpf_cliente char(11) not null,
 data_cadastro date not null
 );
@@ -51,10 +51,10 @@ data_cadastro date not null
 
 create table usuarios(
 id_usuario int not null primary key auto_increment,
-usuario varchar (220),
+usuario varchar (220) not null,
 email_usuario varchar(30) not null,
 senha_usuario varchar(50) not null,
-situacao_usuario enum('b','d') not null
+situacao_usuario enum('b','d') not 
 );
 
 
@@ -63,11 +63,11 @@ create table livro(
 id_livro int not null primary key auto_increment,
 codigo char (4) unique,
 titulo varchar(50) not null,  
-data_publicacao date not null,
+data_publicacao date,
 idioma varchar(30) not null,
 volume int, 
 edicao int,
-data_registro date not null,
+data_registro date,
 paginas int, 
 descricao text,
 status enum('d','i') not null

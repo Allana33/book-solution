@@ -1,7 +1,7 @@
 <?php
 
 
-include "Layout.php";
+include "Layout";
 $layout = new Layout();
 $layout->conteudo("cabecalho");
 $layout->conteudo("menu");
