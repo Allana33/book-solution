@@ -51,7 +51,7 @@ if(isset($_SESSION['msg'])){
 ?>
 
         </p></div>
-        <input type="submit" value="Login" name="Login">        
+        <input type="submit" value="login" name="login">        
         <div class="signup_link">
          <!-- Não é membro? <a href="#">Cadastre-se</a>-->
         </div>        

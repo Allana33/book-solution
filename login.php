@@ -10,7 +10,7 @@ include_once 'conexao.php';
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 
-if (!empty($dados['Login'])) {
+if (!empty($dados['login'])) {
     $usuario = logarUsuario($conn,$dados['usuario'],$dados['senha_usuario']);
     if($usuario){
             $_SESSION['id'] = $usuario['id_usuario'];
