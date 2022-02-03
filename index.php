@@ -6,18 +6,23 @@ ob_start();
 ?>
 
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-ico">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <title>Login</title>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-ico">
+<link rel="stylesheet" href="assets/css/index.css"> 
+<title>Login</title>
+
 </head>
 
 <body>
     <div class="lottie-bg">
-        <lottie-interactive path="assets/animations/bookbg2.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
+        <lottie-interactive path="assets/lotties/bookbg2.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
     </div>       
     <div class="center">
       

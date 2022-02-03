@@ -29,6 +29,7 @@ class Layout
    public function conteudo($conteudo){
       
     include $conteudo.".php";
+    
    }
 
 }

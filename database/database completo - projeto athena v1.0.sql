@@ -12,29 +12,29 @@ email varchar(30) not null
 
 
 create table funcionario(
-id_funcionario int not null primary key auto_increment,
-nome_completo_funcionario varchar(50) not null,
-cpf_funcionario char(11) not null, 
-sexo enum ('m', 'f') not null,
+id_funcionario int primary key auto_increment,
+nome_completo_funcionario varchar(50),
+cpf_funcionario char(11), 
+sexo enum ('m', 'f'),
 cargo varchar(30),
-data_admissao date not null
+data_admissao date
 );
 
 
 
 create table contato_funcionario(
-id_contato_funcionario int not null primary key auto_increment,
+id_contato_funcionario int primary key auto_increment,
 telefone char(12),
-celular char(14) not null,
-email varchar(50) not null
+celular char(14),
+email varchar(50)
 );
 
 
 create table contato_cliente(
-id_contato_cliente int not null primary key auto_increment,
+id_contato_cliente int primary key auto_increment,
 telefone char(12),
-celular char(14) not,
-email varchar(50) not
+celular char(14),
+email varchar(50)
 ); 
 
 
@@ -43,8 +43,8 @@ create table cliente(
 id_cliente int not null primary key auto_increment,
 sexo enum ('m', 'f'),
 nome_completo_cliente varchar(50),
-cpf_cliente char(11) not null,
-data_cadastro date not null
+cpf_cliente char(11),
+data_cadastro date
 );
 
 
@@ -52,9 +52,9 @@ data_cadastro date not null
 create table usuarios(
 id_usuario int not null primary key auto_increment,
 usuario varchar (220) not null,
-email_usuario varchar(30) not null,
-senha_usuario varchar(50) not null,
-situacao_usuario enum('b','d') not 
+email_usuario varchar(30),
+senha_usuario varchar(80),
+situacao_usuario enum('b','d') 
 );
 
 
@@ -62,15 +62,15 @@ situacao_usuario enum('b','d') not
 create table livro(
 id_livro int not null primary key auto_increment,
 codigo char (4) unique,
-titulo varchar(50) not null,  
+titulo varchar(50),  
 data_publicacao date,
-idioma varchar(30) not null,
+idioma varchar(30),
 volume int, 
 edicao int,
 data_registro date,
 paginas int, 
 descricao text,
-status enum('d','i') not null
+status enum('d','i')
 );
 
 
@@ -117,8 +117,8 @@ genero_id_livro int not null primary key auto_increment
 
 create table reserva(
 id_reserva int not null primary key auto_increment,
-data_reserva date not null,
-prazo_reserva date not null  
+data_reserva date,
+prazo_reserva date  
 );
 
 
@@ -126,9 +126,6 @@ prazo_reserva date not null
 create table reserva_livro( 
 livro_id_reserva int not null primary key auto_increment
 );
-
-
-
 
 create table lista( 
 id_lista int not null primary key auto_increment

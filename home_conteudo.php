@@ -1,6 +1,4 @@
 
-<body>
+<a style="color: red;" href="sair">Sair</a>
 
-    <a href="sair">Sair</a>
 
-</body>

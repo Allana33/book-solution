@@ -1,6 +1,6 @@
 <?php 
 
-include "Layout";
+include "Layout.php";
 $layout = new Layout();
 $layout->conteudo = "formulario_livro";
 $layout->index(); 
@@ -9,22 +9,17 @@ $layout->index();
 
 include "conexao.php";
 
-
 $dadoslivro = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-
-
 
 if (isset($dadoslivro['cadastro'])) {
 
-    $livro = cadastroLivro($conn,$dadoslivro['titulo']);
-    if($livro){
+    if($livro = cadastroLivro($conn,$dadoslivro['titulo'])){ 
 
-            $_POST['msg'] = "<p style='color: #00ff00>Erro: Cadastrou mas nao tem erro?!</p>";
+            $_POST['msg'] = "<p style='color: #00ff00>NAO CADASTRADO</p>"; 
             
     }else{
 
-        $_POST['msg'] = "<p style='color: #ff0000'>Erro: Cadastrou mas nao tem erro?!</p>";
+        $_POST['msg'] = "<p style='color: #00ff00'>CADASTRADO</p>";
     }
 
 }
@@ -37,9 +32,9 @@ if(isset($_POST['msg'])){
 function cadastroLivro($conn,$livro)
 {
     try {
-        $sql  = "INSERT INTO livro (titulo) VALUES (:titulo)";
+        $sql  = "INSERT INTO livro (titulo) VALUES (:titulo)"; 
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':titulo', $livro, PDO::PARAM_STR); //PARAM_INT < NUMERO // PARAM_XYZ Especificar tipo.
+        $stmt->bindParam(':titulo', $livro); //PARAM_INT < NUMERO // PARAM_XYZ Especificar tipo.
         $stmt->execute();
         return json_decode(json_encode($stmt->fetch()), true);
     }
@@ -47,32 +42,4 @@ function cadastroLivro($conn,$livro)
         echo "Error:" . $e->getMessage();
     }
 }
-
-/*if (isset($_POST['titulo'])){
-$nome = $_POST['titulo'];
-$codigo = $_POST['codigo'];
-$botao = $_POST['cadastro'];
-
-
-$dadoslivro = new Livro();
-
-
-if($botao=="cadastro"){
-
-    $livro->cadastroLivro($conn,$dadoslivro); 
-
-
-}*/ // if botao cadastrar <-
-
-//else if($botao=="buscar"){          -- aqui é para buscar no botao(submit 'value buscar', 'name botao' etc..) e aparecer a lista de Livros cadastradas na mesma página.
-  //  $livroDao->buscarLivro();
-    
- //   foreach ($livroDao->buscarLivro() as $resultado){
-   //     echo $resultado['nome']."<br>";
-   //     echo $resultado['valor']."<hr>";
-   // }
-//}       ---------------------------
-
-
-//} // if(isset)
 
