@@ -6,7 +6,7 @@
 
   <div class="mb-3">
     
-    <input type="text" required="required"  name="titulo"  value="titulo" placeholder="Titulo">
+    <input type="text" required="required"  name="titulo" placeholder="Titulo">
     
   </div>
 

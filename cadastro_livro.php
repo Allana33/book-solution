@@ -3,7 +3,7 @@
 include "Layout.php";
 $layout = new Layout();
 $layout->conteudo = "formulario_livro";
-$layout->index(); 
+$layout->index();
 
 // \/ daqui para baixo é só o cadastro, mysql etc. 
 
@@ -15,7 +15,7 @@ if (isset($dadoslivro['cadastro'])) {
 
     if($livro = cadastroLivro($conn,$dadoslivro['titulo'])){ 
 
-            $_POST['msg'] = "<p style='color: #00ff00>NAO CADASTRADO</p>"; 
+            $_POST['msg'] = "<p style='color: #00ff00>NAO CADASTRADO</p>";
             
     }else{
 
@@ -40,6 +40,7 @@ function cadastroLivro($conn,$livro)
     }
     catch (PDOException $e) {
         echo "Error:" . $e->getMessage();
+        
     }
 }
 
