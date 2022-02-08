@@ -1,0 +1,68 @@
+/* urls*/
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/*urls */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color: black;
+}
+
+
+#a01:hover{
+ color: yellow;
+ text-decoration: none;
+ background-color: red;
+ border: none;
+}
+
+#a01{
+
+    text-decoration: none;
+    border: none;
+    color: red;
+    background-color: yellow;
+    font-family: 'Righteous';
+    padding: 3px;
+    transition: 0.70s;
+    border-radius: 5px;
+}
+
+.nav01{
+
+   text-align: center;
+
+
+}
+
+
+#h1conteudo{
+    color: white;
+}
+
+.cadlivro{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.h1titulo{
+    font-family:  'Work Sans' 'bold';
+    color: white;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.h2titulo{
+    font-family:  'Work Sans' 'bold';
+    color: white;
+}
+
+#pinput{
+    color: white;
+}
