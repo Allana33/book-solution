@@ -60,7 +60,7 @@ id_usuario int not null primary key auto_increment,
 usuario varchar (220) not null,
 email_usuario varchar(30),
 senha_usuario varchar(80),
-situacao_usuario enum('b','d') 
+status_usuario enum('b','d') 
 );
 
 
@@ -76,7 +76,7 @@ edicao int,
 data_registro date,
 paginas int, 
 descricao text,
-status enum('d','i')
+status_livro enum('d','i')
 );
 
 
