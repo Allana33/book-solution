@@ -2,13 +2,18 @@ create database athena
 default character set utf8mb4 
 default collate utf8mb4_unicode_ci;
 
+
+
 use athena;
+
+
 
 create table biblioteca(
 nome_biblioteca varchar(50) not null,
 telefone char(14) not null,
 email varchar(30) not null
 );
+
 
 
 create table funcionario(
@@ -30,14 +35,6 @@ email varchar(50)
 );
 
 
-create table contato_cliente(
-id_contato_cliente int primary key auto_increment,
-telefone char(12),
-celular char(14),
-email varchar(50)
-); 
-
-
 
 create table cliente( 
 id_cliente int not null primary key auto_increment,
@@ -46,6 +43,15 @@ nome_completo_cliente varchar(50),
 cpf_cliente char(11),
 data_cadastro date
 );
+
+
+
+create table contato_cliente(
+id_contato_cliente int primary key auto_increment,
+telefone char(12),
+celular char(14),
+email varchar(50)
+); 
 
 
 
