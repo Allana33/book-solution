@@ -1,6 +1,8 @@
 <?php
 
-//die(password_hash("123", PASSWORD_DEFAULT)); // hash para senha, colocar no DB
+//die(password_hash("123", PASSWORD_DEFAULT)); 
+/* hash para senha, colocar no DB, Descomente apenas o "die(password_hash("123", PASSWORD_DEFAULT));" 
+irá vir uma sennha criptografada, esta senha criptografada voces colocam no banco de Dados, igual o video que passei do cara ensinando.  */
 
 session_start();
 ob_start();
