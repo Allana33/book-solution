@@ -13,5 +13,9 @@ $layout = new Layout();
 $layout->conteudo = "home_conteudo";
 $layout->index();
 
+?>
+
+
+
 
 

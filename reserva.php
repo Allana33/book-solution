@@ -1,11 +1,7 @@
 <?php 
 include "Layout.php";
 $layout = new Layout();
-$layout->conteudo = "livros_conteudo";
+$layout->conteudo = "reserva_conteudo";
 $layout->index();
 
 ?>
-
-
-
-
