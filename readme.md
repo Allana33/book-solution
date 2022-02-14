@@ -14,7 +14,6 @@
 <p>Lucas Menchon</p>
 <p>Roger</p>
 <p>Allana</p>
-<p>João</p>
 
 </div>
 

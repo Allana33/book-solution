@@ -27,7 +27,8 @@ if( !isset($_SESSION['id']) OR !isset($_SESSION['usuario'])){
 
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/menu0.css">
+<link rel="stylesheet" href="assets/css/menu.css">
+<link rel="stylesheet" href="assets/css/funcionario.css">
 
 <!-- fim main css -->
 
