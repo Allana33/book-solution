@@ -1,7 +1,7 @@
 
     <h1>Cadastro de Funcionários</h1> 
         <div class= "divprincipal">
-            <form method="POST" action="cadastro_funcionario">
+            <form method="POST" action="cadastro_funcionario.php">
                 <div class="teste">
                     <label for="nomecompleto">Nome</label>
                     <input type="text" required name="nome_completo_funcionario" placeholder="Digite o nome completo">
