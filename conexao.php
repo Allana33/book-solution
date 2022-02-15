@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "12345678";
+$pass = "@LARbooks$1458$";
 $dbname = "athena";
 
 try{
