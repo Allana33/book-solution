@@ -14,19 +14,19 @@ ob_start();
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-ico">
-<link rel="stylesheet" href="assets/css/index.css"> 
-<title>Login</title>
+<link rel="stylesheet" href="assets/css/index.css">
+<link rel="icon" href="assets/img/favicon.png" type="image">
+<title>Space Books</title>
 
 </head>
 
 <body>
     <div class="lottie-bg">
-        <lottie-interactive path="assets/lotties/bookbg2.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
+        <lottie-interactive path="assets/lotties/purple1.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: fixed;">
     </div>       
     <div class="center">
       
-      <h1>Login</h1>
+      <h1>Space Books</h1>
       <form method="POST" action="login.php">
         <div class="txt_field">
           <input type="text" required name="usuario" value="<?php if(isset($dados['usuario'])){ echo $dados['usuario']; } ?>">
@@ -38,7 +38,7 @@ ob_start();
           <span></span>
           <label>Senha</label>
         </div>
-        <a class="pass">Esqueceu senha?</a>
+        <a class="pass">Esqueceu sua senha?</a>
         <div class="pass"></div>
         <div class='txt_field' style='color: #ff0000'><p>
 <?php 
@@ -51,7 +51,7 @@ if(isset($_SESSION['msg'])){
 ?>
 
         </p></div>
-        <input type="submit" value="login" name="login">        
+        <input type="submit" value="Login" name="login">        
         <div class="signup_link">
          <!-- Não é membro? <a href="#">Cadastre-se</a>-->
         </div>        
