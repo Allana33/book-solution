@@ -10,7 +10,7 @@ $layout->conteudo("rodape");*/
 
 include "Layout.php";
 $layout = new Layout();
-$layout->conteudo = "home_conteudo";
+$layout->conteudo = "front-end//home_conteudo";
 $layout->index();
 
 ?>

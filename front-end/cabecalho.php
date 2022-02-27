@@ -19,9 +19,7 @@ if( !isset($_SESSION['id']) OR !isset($_SESSION['usuario'])){
 
 <!-- Bootstrap outros Frameworks -->
 
-
-
-<!-- fim frameworks -->
+<!-- fim Bootstrap outros Frameworks -->
 
 <!-- main css -->
 

@@ -13,10 +13,10 @@ class Layout
    
    public  function __construct()
    {
-      $this->cabecalho = "cabecalho";
-      $this->menu = "menu";
-      $this->conteudo="formulario";
-      $this->rodape = "rodape";
+      $this->cabecalho = "front-end//cabecalho";
+      $this->menu = "front-end//menu";
+      $this->conteudo="front-end//formulario";
+      $this->rodape = "front-end//rodape";
    }
 
    public function index(){
