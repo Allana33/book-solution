@@ -16,6 +16,7 @@ if( !isset($_SESSION['id']) OR !isset($_SESSION['usuario'])){
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="assets/img/faviconx.png" type="image">
 
 <!-- Bootstrap outros Frameworks -->
 
@@ -30,7 +31,7 @@ if( !isset($_SESSION['id']) OR !isset($_SESSION['usuario'])){
 
 <!-- fim main css -->
 
-<title class="titlesite">Athena</title>
+<title class="titlesite">Books Space</title>
 
 </head>
 <body>
