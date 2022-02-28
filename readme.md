@@ -1,4 +1,4 @@
-<h2 style="  color: blue; text-shadow: -1px -1px 0px #FFF, -1px 1px 0px #FFF, 1px -1px 0px #FFF, 1px 0px 0px #FFF;">TCC Space Books </h2>
+<h2 style="  color: blue; text-shadow: -1px -1px 0px #FFF, -1px 1px 0px #FFF, 1px -1px 0px #FFF, 1px 0px 0px #FFF;">TCC Books Space</h2>
 
 <p>Projeto criado para Trabalho de Conclusão de Curso (TCC). Desenvolvido pelo grupo na ETEC Juscelino Kubitschek</p>
 <hr>
