@@ -1,6 +1,6 @@
 <header>
     <div class="nav01">
-        <h1>Books Space</h1>    
+        <h1>Book Solution</h1>    
         <nav>
             <ul>
                 <li><a id="a01" href="home.php" target="blank">Home</a></li>

@@ -16,17 +16,17 @@ ob_start();
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="assets/css/index.css">
 <link rel="icon" href="assets/img/faviconx.png" type="image">
-<title>Books Space</title>
+<title>Book Solution</title>
 
 </head>
 
 <body>
     <div class="lottie-bg">
-        <lottie-interactive path="assets/lotties/bookbg0.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: fixed;">
+        <lottie-interactive path="assets/lotties/bookbg0.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
     </div>       
     <div class="center">
       
-      <h1>Books Space</h1>
+      <h1> <img src="assets/img/faviconx.png" style="width: 50px; height: auto; display:start;"> Book Solution </img></h1>
       <form method="POST" action="login.php">
         <div class="txt_field">
           <input type="text" required name="usuario" value="<?php if(isset($dados['usuario'])){ echo $dados['usuario']; } ?>">

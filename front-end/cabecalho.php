@@ -31,7 +31,7 @@ if( !isset($_SESSION['id']) OR !isset($_SESSION['usuario'])){
 
 <!-- fim main css -->
 
-<title class="titlesite">Books Space</title>
+<title class="titlesite">Book Solution</title>
 
 </head>
 <body>
