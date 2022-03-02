@@ -28,6 +28,6 @@
   <img align="center"  height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
 </div>
 <br>
-<h2><a href="https://booksolution.onlucas.com" style="color: #6511a5; text-decoration: none;"><b>Preview do Projeto</a></h2>
+<h2><a href="https://booksolution.onlucas.com" style="color: #6511a5; text-decoration: none;" target="blank"><b>Preview do Projeto</a></h2>
 
-<p>O Projeto está sendo hospedado na Oracle Cloud Free, número máximo de 2 VM. Está sendo utilizado o Nginx e Nginx Manager para fazer os certificados e etc. Você pode acessar para ver como está, clicando aqui em <a href="https://booksolution.onlucas.com" style="color: #6511a5; text-decoration: none;"><b>Book Solution</a></p>
+<p>O Projeto está sendo hospedado na Oracle Cloud Free, número máximo de 2 VM. Está sendo utilizado o Nginx e Nginx Manager para fazer os certificados e etc. Você pode acessar para ver como está, clicando aqui em <a href="https://booksolution.onlucas.com" style="color: #6511a5; text-decoration: none;" target="blank"><b>Book Solution</a></p>
