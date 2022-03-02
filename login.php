@@ -11,11 +11,12 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 
 if (!empty($dados['login'])) {
-    $usuario = logarUsuario($conn,$dados['usuario'],$dados['senha_usuario']);
+    $usuario = loginUsuario($conn,$dados['usuario'],$dados['senha_usuario']);
     if($usuario){
             $_SESSION['id'] = $usuario['id_usuario'];
             $_SESSION['usuario'] = $usuario['usuario'];
             header("Location: home.php");
+            
     }else{
         $_SESSION['msg'] = "Erro: Usuário ou senha inválida!";
         header("Location: index.php");
@@ -23,7 +24,7 @@ if (!empty($dados['login'])) {
 
 } 
 
-    function logarUsuario($conn,$email, $senha)
+    function loginUsuario($conn,$email, $senha)
     {   
         try {  
                

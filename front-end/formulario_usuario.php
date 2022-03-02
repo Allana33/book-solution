@@ -1,5 +1,5 @@
 
-    <h1>Cadastro de Funcionários</h1> 
+    <h1>Cadastro de Usuário</h1> 
         <div class= "divprincipal">
             <form method="POST" action="cadastro_funcionario.php">
                 <div class="teste">

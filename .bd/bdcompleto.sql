@@ -1,22 +1,22 @@
-create database athena 
+create database book_solution 
 default character set utf8mb4 
 default collate utf8mb4_unicode_ci;
 
 
 
-use athena;
+use book_solution;
 
 
 
-create table biblioteca(
+/*create table biblioteca(
 nome_biblioteca varchar(50) not null,
 telefone char(14) not null,
 email varchar(30) not null
-);
+); */
 
 
 
-create table funcionario(
+/*create table funcionario(
 id_funcionario int primary key auto_increment,
 nome_completo_funcionario varchar(50),
 cpf_funcionario char(11), 
@@ -32,7 +32,7 @@ id_contato_funcionario int primary key auto_increment,
 telefone char(12),
 celular char(14),
 email varchar(50)
-);
+); */
 
 
 
