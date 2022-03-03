@@ -30,4 +30,4 @@
 <br>
 <h2 style="color: #6511a5;"><b>Preview do Projeto</a></h2>
 
-<p>O Projeto está sendo hospedado na Oracle Cloud Free, número máximo de 2 VM. Está sendo utilizado o Nginx e Nginx Manager para fazer os certificados e etc. Você pode acessar para ver como está, clicando aqui em <a href="https://booksolution.tilucas.com" style="color: #6511a5; text-decoration: none;" target="blank"><b>Book Solution</a></p>
+<p>O Projeto está sendo hospedado na Oracle Cloud Free, número máximo de 2 VM. Está sendo utilizado o Nginx e Nginx Manager para fazer os certificados e etc. Você pode acessar para ver como está, clicando aqui em <a href="http://booksolution.tilucas.com" style="color: #6511a5; text-decoration: none;" target="blank"><b>Book Solution</a></p>
