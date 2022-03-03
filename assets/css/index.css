@@ -16,6 +16,24 @@
     bottom:0;
 }
 
+/*LOGO INDEX*/
+
+.logoindex{
+
+  text-align: center;
+
+}
+
+.logoindex img{
+
+  padding-top: 15px;
+  width: 42%;
+
+
+
+
+}
+
 
 /* BOX LOGIN */
 
@@ -35,6 +53,8 @@ body{
 }
 
 h1 {
+  padding: 0;
+  margin: 0;
   color: #6511a5;
 }
 

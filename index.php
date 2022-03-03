@@ -23,10 +23,11 @@ ob_start();
 <body>
     <div class="lottie-bg">
         <lottie-interactive path="assets/lotties/bookbg0.json"  background="transparent" speed="1.0" loop  autoplay style="left:0; right:0; top:0; bottom:0; position: absolute;">
-    </div>       
+    </div>  
+    
     <div class="center">
-      
-      <h1> <img src="assets/img/faviconx.png" style="width: 50px; height: auto; display:start;"> Book Solution </img></h1>
+     <div class="logoindex"><img  src="assets/img/logoindex.png"></img>
+     </div>
       <form method="POST" action="login.php">
         <div class="txt_field">
           <input type="text" required name="usuario" value="<?php if(isset($dados['usuario'])){ echo $dados['usuario']; } ?>">
