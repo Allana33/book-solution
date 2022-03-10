@@ -11,7 +11,7 @@
 
                 <li><a id="a01" href="livros.php" target="blank">Livros</a></li>
                 
-                <li><a id="a01" href="reserva.php">Reservas</a></li>
+                <li><a id="a01" href="reserva">Reservas</a></li>
             </ul>
         </nav>
 
