@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "@LARbook$1458$"; 
-$dbname = "athena";
+$dbname = "book_solution";
 
 try{
 
