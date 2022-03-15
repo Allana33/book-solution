@@ -11,4 +11,4 @@ session_unset();
 $_SESSION['msg'] = "<p style='color: green'>Deslogado com sucesso!</p>"; 
 
 
-header("Location: index.php");
+header("Location: index");
