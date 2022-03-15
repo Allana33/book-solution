@@ -15,11 +15,11 @@ if (!empty($dados['login'])) {
     if($usuario){
             $_SESSION['id'] = $usuario['id_usuario'];
             $_SESSION['usuario'] = $usuario['usuario'];
-            header("Location: home.php");
+            header("Location: home");
             
     }else{
         $_SESSION['msg'] = "Erro: Usuário ou senha inválida!";
-        header("Location: index.php");
+        header("Location: index");
     }
 
 } 
