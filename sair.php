@@ -8,7 +8,7 @@ ob_start();
 
 session_unset();
 
-$_SESSION['msg'] = "<p style='color: green'>Deslogado com sucesso!</p>"; 
+$_SESSION['msg'] = "<br><p style='color: green'>Deslogado com sucesso!</p>"; 
 
 
 header("Location: index");

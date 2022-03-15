@@ -40,8 +40,9 @@ ob_start();
           <label>Senha</label>
         </div>
         <a class="pass">Esqueceu sua senha?</a>
-        <div class="pass"></div>
-        <div class='txt_field' style='color: #ff0000'><p>
+        <br><br>
+       <!--<div class="pass"></div>-->
+        <div class='field' style='color: #ff0000'>
 <?php 
 
 if(isset($_SESSION['msg'])){
