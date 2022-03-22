@@ -1,6 +1,7 @@
 body {
     font-family: "Poppins", sans-serif;
 }
+
 .btn {
     position: relative;
     background-color: aliceblue;
@@ -23,6 +24,8 @@ body {
     left: 0;
     bottom: 0;
     background-color: #ffffff;
+    border: none;
+    text-decoration: none;
     
 
 }
@@ -30,8 +33,17 @@ body {
 .btn-center::after{
     transform: scale(0,1);
     transition: transform 0.3s ease;
+    border: none;
+    text-decoration: none;
 }
 
 .btn-center:hover::after{
-    transform: scale(1,1);
+    transform: scale(1,0.9);
+    border: none;
+    text-decoration: none;
+}
+
+.btn-center:hover{
+    border: none;
+    text-decoration: none;
 }
