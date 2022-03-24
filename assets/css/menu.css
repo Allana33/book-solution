@@ -4,16 +4,10 @@ body {
 
 .btn {
     position: relative;
-    background-color: aliceblue;
-    color:black;
-    margin-bottom: 0.5rem;
-    padding: 0;
+    background-color: #fff;
     border: none;
     outline: none;
-    font-size: 1.2rem;
-    font-weight: bold;
     text-decoration: none;
-
 }
 
 .btn::after{
@@ -26,24 +20,13 @@ body {
     background-color: #ffffff;
     border: none;
     text-decoration: none;
-    
-
-}
-
-.btn-center::after{
     transform: scale(0,1);
     transition: transform 0.3s ease;
-    border: none;
-    text-decoration: none;
 }
 
-.btn-center:hover::after{
-    transform: scale(1,0.9);
-    border: none;
-    text-decoration: none;
-}
 
-.btn-center:hover{
+.btn:hover::after {
+    transform: scale(1);
     border: none;
     text-decoration: none;
 }

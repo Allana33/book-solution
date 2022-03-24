@@ -1,7 +1,7 @@
 
     <div class="container">
-        <div class="text">Cadastro de Usuários</div>
-        <form method="POST" action="./cadastro_usuario"> 
+        <div class="text">Cadastro de Funcionário</div>
+        <form method="POST" action="./cadastro_funcionario"> 
            <div class="form-row">
               <div class="input-data">
                  <input type="text" required>
