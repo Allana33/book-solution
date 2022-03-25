@@ -8,31 +8,25 @@ use book_solution;
 
 
 
-create table biblioteca(
-nome_biblioteca varchar(50) not null,
-telefone char(14) not null,
-email varchar(30) not null
-); 
-
-
-
 create table funcionario(
-id_funcionario int primary key auto_increment,
-nome_completo_funcionario varchar(50),
-cpf_funcionario char(11), 
-sexo enum ('m', 'f'),
+id_funcionario int not null primary key auto_increment,
+nome_funcionario varchar(50),
+cpf_funcionario char(11),
 cargo varchar(30),
-data_admissao date
+data_admissao date,
+usuario_funcionario varchar (220) not null,
+senha_funcionario varchar(100),
+email_funcionario varchar(50)
 );
 
 
 
-create table contato_funcionario(
-id_contato_funcionario int primary key auto_increment,
-telefone char(12),
-celular char(14),
-email varchar(50)
-);
+/*create table contato_funcionario(
+id_contato_funcionario_null int primary key auto_increment,
+telefone_funcionario_null char(12),
+celular_funcionario_null char(14),
+email_funcionario_null varchar(50)
+);*/
 
 
 
@@ -55,13 +49,13 @@ email varchar(50)
 
 
 
-create table usuarios(
+/*create table usuarios(
 id_usuario int not null primary key auto_increment,
 usuario varchar (220) not null,
 email_usuario varchar(30),
 senha_usuario varchar(80),
 status_usuario enum('b','d') 
-);
+);*/
 
 
 
@@ -143,15 +137,15 @@ id_lista int not null primary key auto_increment
 
 #relacao funcionario usuario do sistema
 
-alter table funcionario add id_usuario_funcionario int not null;
-alter table funcionario add foreign key(id_usuario_funcionario) references usuarios(id_usuario)
-on delete cascade on update cascade;
+/*alter table funcionario add id_usuario_funcionario int not null;
+alter table funcionario add foreign key(id_usuario_funcionario) references funcionario(id_funcionario)
+on delete cascade on update cascade; 
 
 #relacao contato funcionario
 
 alter table contato_funcionario add nome_funcionario int not null;
 alter table contato_funcionario add foreign key (nome_funcionario) references funcionario(id_funcionario)
-on delete cascade on update cascade;
+on delete cascade on update cascade;*/
 
 #relacao contato cliente
 

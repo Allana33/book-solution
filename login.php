@@ -1,6 +1,6 @@
 <?php
 
-//die(password_hash("@LARbook$1458$", PASSWORD_DEFAULT)); // hash para senha, colocar no DB
+//die(password_hash("LAR#1245#", PASSWORD_DEFAULT)); // hash para senha, colocar no DB
 
 session_start();
 ob_start();
@@ -11,31 +11,31 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 
 if (!empty($dados['login'])) {
-    $usuario = loginUsuario($conn,$dados['usuario'],$dados['senha_usuario']);
-    if($usuario){
-            $_SESSION['id'] = $usuario['id_usuario'];
-            $_SESSION['usuario'] = $usuario['usuario'];
+    $usuario_funcionario = loginFuncionario($conn,$dados['usuario_funcionario'],$dados['senha_funcionario']);
+    if($usuario_funcionario){
+            $_SESSION['id_funcionario'] = $usuario_funcionario['id_funcionario'];
+            $_SESSION['usuario_funcionario'] = $usuario_funcionario['usuario_funcionario'];
             header("Location: home");
             
     }else{
         $_SESSION['msg'] = "Erro: Usuário ou senha inválida!";
-        header("Location: index");
+        header("Location: index"); 
     }
 
 } 
 
-    function loginUsuario($conn,$email, $senha)
+    function loginFuncionario($conn,$email_funcionario, $senha_funcionario)
     {   
         try {  
                
-            $sql  = "SELECT * FROM usuarios WHERE usuario = :email_usuario"; 
+            $sql  = "SELECT * FROM funcionario WHERE usuario_funcionario = :email_funcionario"; 
             $stmt = $conn->prepare($sql); 
-            $stmt->bindParam(':email_usuario', $email);
-            $stmt->execute(); 
-            if($usuario = $stmt->fetch()){
-                if(password_verify($senha,$usuario['senha_usuario'])){
+            $stmt->bindParam(':email_funcionario', $email_funcionario);
+            $stmt->execute();
+            if($usuario_funcionario = $stmt->fetch()){
+                if(password_verify($senha_funcionario,$usuario_funcionario['senha_funcionario'])){
 
-                    return json_decode(json_encode($usuario), true); 
+                    return json_decode(json_encode($usuario_funcionario), true); 
 
                 }
                 

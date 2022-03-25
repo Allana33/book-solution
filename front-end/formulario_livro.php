@@ -2,7 +2,7 @@
 
 <h2 class="h2titulo">CADASTRO DE LIVRO</h2>
 
-<form method="POST" action="./cadastro_livro">
+<form method="POST" action="cadastro_livro">
 
   <div class="mb-3">
     
@@ -10,7 +10,7 @@
     
   </div>
 
-  <button type="submit" value="cadastro" name="cadastro">Cadastrar</button>
+  <button type="submit" value="" name="cadastro">Cadastrar</button>
 
 </form>
 

@@ -1,6 +1,6 @@
 <?php
 
-if( !isset($_SESSION['id']) OR !isset($_SESSION['usuario'])){
+if( !isset($_SESSION['id_funcionario']) OR !isset($_SESSION['usuario_funcionario'])){
     $_SESSION['msg'] = "<p style='color: #ff0000'>Erro: Necessário realizar o login para acessar a página!</p>";
     header("Location: index");
     

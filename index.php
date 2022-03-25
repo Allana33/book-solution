@@ -30,12 +30,12 @@ ob_start();
      </div>
       <form method="POST" action="login.php">
         <div class="txt_field">
-          <input type="text" required name="usuario" value="<?php if(isset($dados['usuario'])){ echo $dados['usuario']; } ?>">
+          <input type="text" required name="usuario_funcionario" value="<?php if(isset($dados['usuario_funcionario'])){ echo $dados['usuario_funcionario']; } ?>">
           <span></span>
           <label>Usuário</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="senha_usuario" value="<?php if(isset($dados['senha_usuario'])){ echo $dados['senha_usuario']; } ?>">
+          <input type="password" required name="senha_funcionario" value="<?php if(isset($dados['senha_funcionario'])){ echo $dados['senha_funcionario']; } ?>">
           <span></span>
           <label>Senha</label>
         </div>
