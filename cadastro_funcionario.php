@@ -7,17 +7,27 @@ $layout->index();
 
 include "conexao.php";
 
-$dadoslivro = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+$dadosfuncionario = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-if (isset($dadoslivro['cadastro'])) {
+if (isset($dadosfuncionario['cadastro'])) {
 
-    if($livro = cadastroLivro($conn,$dadoslivro['titulo'])){ 
+    $nomefuncionario = $dadosfuncionario['nome_funcionario'];
+    $cpffuncionario = $dadosfuncionario['cpf_funcionario'];
+    $cargo = $dadosfuncionario['cargo'];
+    $dataadmissao = $dadosfuncionario['data_admissao'];
+    $usuariofuncionario = $dadosfuncionario['usuario_funcionario'];
+    $senhafuncionario = $dadosfuncionario['senha_funcionario'];
+    $emailfuncionario = $dadosfuncionario['email_funcionario'];
+    $telefonefuncionario = $dadosfuncionario['telefone_funcionario'];
+    $celularfuncionario = $dadosfuncionario['celular_funcionario'];
 
-            $_POST['msg'] = "<p style='color: #00ff00>NAO CADASTRADO</p>";
+    if($funcionario = cadastroFuncionario($conn, $nomefuncionario, $cpffuncionario,$cargo, $dataadmissao, $usuariofuncionario, $senhafuncionario, $emailfuncionario, $telefonefuncionario, $celularfuncionario)){ 
+
+            $_POST['msg'] = "<p style='color: red';>CADASTRADO</p>";
             
     }else{
 
-        $_POST['msg'] = "<p style='color: #00ff00'>CADASTRADO</p>";
+        $_POST['msg'] = "<p style='color: green';>CADASTRADO</p>";
     }
 
 }
@@ -27,12 +37,20 @@ if(isset($_POST['msg'])){
     unset($_POST['msg']);
 }
 
-function cadastroLivro($conn,$livro)
+function cadastroFuncionario($conn,$nomefuncionario,$cpffuncionario,$cargo,$dataadmissao,$usuariofuncionario,$senhafuncionario,$emailfuncionario,$telefonefuncionario,$celularfuncionario)
 {
     try {
-        $sql  = "INSERT INTO livro (titulo) VALUES (:titulo)"; 
+        $sql  = "INSERT INTO funcionario (nome_funcionario,cpf_funcionario,cargo,data_admissao,usuario_funcionario,senha_funcionario,email_funcionario,telefone_funcionario,celular_funcionario) VALUES (:nome_funcionario,:cpf_funcionario,:cargo,:data_admissao,:usuario_funcionario,:senha_funcionario,:email_funcionario,:telefone_funcionario,:celular_funcionario)"; 
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':titulo', $livro); //PARAM_INT < NUMERO // PARAM_XYZ Especificar tipo.
+        $stmt->bindParam(':nome_funcionario', $nomefuncionario); //PARAM_INT < NUMERO // PARAM_XYZ Especificar tipo.
+        $stmt->bindParam(':cpf_funcionario', $cpffuncionario);
+        $stmt->bindParam(':cargo', $cargo);
+        $stmt->bindParam(':data_admissao', $dataadmissao);
+        $stmt->bindParam(':usuario_funcionario', $usuariofuncionario);
+        $stmt->bindParam(':senha_funcionario', $senhafuncionario);
+        $stmt->bindParam(':email_funcionario', $emailfuncionario);
+        $stmt->bindParam(':telefone_funcionario', $telefonefuncionario);
+        $stmt->bindParam(':celular_funcionario', $celularfuncionario);
         $stmt->execute();
         return json_decode(json_encode($stmt->fetch()), true);
     }

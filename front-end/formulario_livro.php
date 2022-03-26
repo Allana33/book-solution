@@ -8,6 +8,7 @@
     
     <input type="text" required="required"  name="titulo" placeholder="Titulo">
     <input type="text" required="required"  name="codigo" placeholder="Codigo">
+    <input type="text" name="data_publicacao" placeholder="Data Publicacao">
     
   </div>
 

@@ -16,6 +16,7 @@
                  <label for="">CPF</label>
               </div>
            </div>
+
            <div class="form-row">
               <div class="input-data">
                  <input type="text" required name="email_funcionario">
@@ -28,6 +29,21 @@
                  <label for="">Celular</label>
               </div>
            </div>
+           <div class="form-row">
+              <div class="input-data">
+                 
+                 <input type="text" name="telefone_funcionario">
+                 <div class="underline"></div>
+                 <label for="">Telefone</label>
+              </div>
+              
+               <div class="input-data" style="display: hidden;">
+                 <fieldset disabled>
+                 <input type="disable" name="">
+                 <div class="underline"></div>
+                 <label for=""></label>
+               </div>
+            </div>
 
            <div class="form-row">
            <div class="input-data">
@@ -57,7 +73,7 @@
                  <div class="form-row submit-btn">
                     <div class="input-data">
                        <div class="inner"></div>
-                       <input type="submit" value="Cadastrar" >
+                       <input type="submit" value="Cadastrar" name="cadastro">
                     </div>
                  </div>
               </div>
