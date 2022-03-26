@@ -16,15 +16,17 @@ cargo varchar(30),
 data_admissao date,
 usuario_funcionario varchar (220) not null,
 senha_funcionario varchar(100),
-email_funcionario varchar(50)
+email_funcionario varchar(50),
+telefone_funcionario char(12),
+celular_funcionario char(14)
 );
 
 
 
 /*create table contato_funcionario(
 id_contato_funcionario_null int primary key auto_increment,
-telefone_funcionario_null char(12),
-celular_funcionario_null char(14),
+telefone_funcionario char(12),
+celular_funcionario char(14),
 email_funcionario_null varchar(50)
 );*/
 
@@ -32,20 +34,19 @@ email_funcionario_null varchar(50)
 
 create table cliente( 
 id_cliente int not null primary key auto_increment,
-sexo enum ('m', 'f'),
-nome_completo_cliente varchar(50),
+nome_cliente varchar(50),
 cpf_cliente char(11),
 data_cadastro date
 );
 
 
 
-create table contato_cliente(
+/*create table contato_cliente(
 id_contato_cliente int primary key auto_increment,
-telefone char(12),
-celular char(14),
-email varchar(50)
-); 
+telefone_cliente char(12),
+celular_cliente char(14),
+email_cliente varchar(50)
+);*/
 
 
 
@@ -137,13 +138,13 @@ id_lista int not null primary key auto_increment
 
 #relacao funcionario usuario do sistema
 
-/*alter table funcionario add id_usuario_funcionario int not null;
+alter table funcionario add id_usuario_funcionario int not null;
 alter table funcionario add foreign key(id_usuario_funcionario) references funcionario(id_funcionario)
 on delete cascade on update cascade; 
 
 #relacao contato funcionario
 
-alter table contato_funcionario add nome_funcionario int not null;
+/*alter table contato_funcionario add nome_funcionario int not null;
 alter table contato_funcionario add foreign key (nome_funcionario) references funcionario(id_funcionario)
 on delete cascade on update cascade;*/
 

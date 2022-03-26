@@ -13,7 +13,10 @@ $dadoslivro = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if (isset($dadoslivro['cadastro'])) {
 
-    if($livro = cadastroLivro($conn,$dadoslivro['titulo'])){ 
+    $titulo = $dadoslivro['titulo'];
+    $codigo = $dadoslivro['codigo'];
+
+    if($livro = cadastroLivro($conn,$titulo,$codigo)){
 
             $_POST['msg'] = "<p style='color: #00ff00>NAO CADASTRADO</p>";
             
@@ -29,12 +32,13 @@ if(isset($_POST['msg'])){
     unset($_POST['msg']);
 }
 
-function cadastroLivro($conn,$livro)
+function cadastroLivro($conn,$titulo,$codigo)
 {
     try {
-        $sql  = "INSERT INTO livro (titulo) VALUES (:titulo)"; 
+        $sql  = "INSERT INTO livro (titulo,codigo) VALUES (:titulo,:codigo)"; 
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':titulo', $livro); //PARAM_INT < NUMERO // PARAM_XYZ Especificar tipo.
+        $stmt->bindParam(':titulo', $titulo);
+        $stmt->bindParam(':codigo', $codigo); //PARAM_INT < NUMERO // PARAM_XYZ Especificar tipo.
         $stmt->execute();
         return json_decode(json_encode($stmt->fetch()), true);
     }
