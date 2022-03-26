@@ -17,8 +17,7 @@ data_admissao date,
 usuario_funcionario varchar (220) not null,
 senha_funcionario varchar(100),
 email_funcionario varchar(50),
-celular_funcionario char(14),
-telefone_funcionario char(12)
+celular_funcionario char(14)
 );
 
 

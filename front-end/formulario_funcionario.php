@@ -11,7 +11,7 @@
                  <label for="">Nome Completo</label>
               </div>
               <div class="input-data">
-                 <input type="text" name="cpf_funcionario">
+                 <input type="text" required name="cpf_funcionario">
                  <div class="underline"></div>
                  <label for="">CPF</label>
               </div>
@@ -24,35 +24,20 @@
                  <label for="">Email</label>
               </div>
               <div class="input-data">
-                 <input type="text" name="celular_funcionario">
+                 <input type="text" required name="celular_funcionario">
                  <div class="underline"></div>
                  <label for="">Celular</label>
               </div>
            </div>
-           <div class="form-row">
-              <div class="input-data">
-                 
-                 <input type="text" name="telefone_funcionario">
-                 <div class="underline"></div>
-                 <label for="">Telefone</label>
-              </div>
-              
-               <div class="input-data" style="display: hidden;">
-                 <fieldset disabled>
-                 <input type="disable" name="">
-                 <div class="underline"></div>
-                 <label for=""></label>
-               </div>
-            </div>
 
            <div class="form-row">
            <div class="input-data">
-                 <input type="text" name="cargo">
+                 <input type="text" required name="cargo">
                  <div class="underline"></div>
                  <label for="">Cargo</label>
               </div>
               <div class="input-data">
-                 <input type="text" name="data_admissao">
+                 <input type="text" required name="data_admissao">
                  <div class="underline"></div>
                  <label for="">Data de Admissão</label>
               </div>
@@ -70,6 +55,7 @@
                  <label for="">Senha</label>
               </div>
            </div>
+
                  <div class="form-row submit-btn">
                     <div class="input-data">
                        <div class="inner"></div>
