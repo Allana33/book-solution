@@ -36,7 +36,10 @@ create table cliente(
 id_cliente int not null primary key auto_increment,
 nome_cliente varchar(50),
 cpf_cliente char(11),
-data_cadastro date
+data_cadastro date,
+telefone_cliente char(12),
+celular_cliente char(14),
+email_cliente varchar(50)
 );
 
 
@@ -136,23 +139,23 @@ id_lista int not null primary key auto_increment
 
 # relacionamentos
 
-#relacao funcionario usuario do sistema
+/*#relacao funcionario usuario do sistema
 
 alter table funcionario add id_usuario_funcionario int not null;
 alter table funcionario add foreign key(id_usuario_funcionario) references funcionario(id_funcionario)
-on delete cascade on update cascade; 
+on delete cascade on update cascade; */
 
-#relacao contato funcionario
+/*#relacao contato funcionario
 
-/*alter table contato_funcionario add nome_funcionario int not null;
+alter table contato_funcionario add nome_funcionario int not null;
 alter table contato_funcionario add foreign key (nome_funcionario) references funcionario(id_funcionario)
 on delete cascade on update cascade;*/
 
-#relacao contato cliente
+/*#relacao contato cliente
 
 alter table contato_cliente add nome_cliente int not null;
 alter table contato_cliente add foreign key (nome_cliente) references cliente(id_cliente)
-on delete cascade on update cascade;
+on delete cascade on update cascade;*/
 
 #relacao reserva cliente
 
