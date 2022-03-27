@@ -1,3 +1,3 @@
 USE book_solution;
 
-INSERT INTO usuarios (email_usuario, senha_usuario, status_usuario, usuario) VALUES ('admin@admin.com', '$2y$10$ZVIbMxoB3eYm9aKzZ2mUUu2Opmj36CEC11LXleSgq6l3ZvzPEaHg6','d','thoradmin');
+INSERT INTO funcionario (nome_funcionario,cpf_funcionario, cargo, usuario_funcionario, senha_funcionario,email_funcionario) VALUES ('ALR Developers','12345678910','Desenvolvedores', 'alradmin','','alr@dev.com'); -- senha ALR#1245#

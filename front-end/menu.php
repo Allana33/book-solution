@@ -8,7 +8,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
-
+      
       <div style="justify-content: flex-end; align-content: end; display: inline-block;">
         <a class="navbar-brand text-white" href="home">
         <img src="assets/img/menuicon.png" alt="" width="40" height="40"> 
@@ -60,5 +60,3 @@
         </div>
       </nav>
 </header>
-
-

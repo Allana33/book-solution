@@ -1,6 +1,6 @@
 <?php
 
-//die(password_hash("LAR#1245#", PASSWORD_DEFAULT)); // hash para senha, colocar no DB
+die(password_hash("ALR#1245#", PASSWORD_DEFAULT)); // hash para senha, colocar no DB
 
 session_start();
 ob_start();
