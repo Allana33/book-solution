@@ -11,7 +11,7 @@
                  <label for="">Nome Completo</label>
               </div>
               <div class="input-data">
-                 <input type="text" required name="cpf_funcionario">
+                 <input type="text"  name="cpf_funcionario">
                  <div class="underline"></div>
                  <label for="">CPF</label>
               </div>
@@ -24,7 +24,7 @@
                  <label for="">Email</label>
               </div>
               <div class="input-data">
-                 <input type="text" required name="celular_funcionario">
+                 <input type="text"  name="celular_funcionario">
                  <div class="underline"></div>
                  <label for="">Celular</label>
               </div>
@@ -37,7 +37,7 @@
                  <label for="">Cargo</label>
               </div>
               <div class="input-data">
-                 <input type="text" required name="data_admissao">
+                 <input type="date"  name="data_admissao">
                  <div class="underline"></div>
                  <label for="">Data de Admissão</label>
               </div>
@@ -50,7 +50,7 @@
                  <label for="">Nome de Usuário</label>
               </div>
               <div class="input-data">
-                 <input type="text" required name="senha_funcionario">
+                 <input type="text"  name="senha_funcionario">
                  <div class="underline"></div>
                  <label for="">Senha</label>
               </div>

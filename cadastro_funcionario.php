@@ -39,14 +39,14 @@ if(isset($_POST['msg'])){
 function cadastroFuncionario($conn,$nomefuncionario,$cpffuncionario,$cargo,$dataadmissao,$usuariofuncionario,$senhafuncionario,$emailfuncionario,$celularfuncionario)
 {
     try {
-        $sql  = "INSERT INTO funcionario (nome_funcionario,cpf_funcionario,cargo,data_admissao,usuario_funcionario,senha_funcionario,email_funcionario,telefone_funcionario,celular_funcionario) VALUES (:nome_funcionario,:cpf_funcionario,:cargo,:data_admissao,:usuario_funcionario,:senha_funcionario,:email_funcionario,:celular_funcionario)"; 
+        $sql  = "INSERT INTO funcionario (nome_funcionario,cpf_funcionario,cargo,data_admissao,usuario_funcionario,senha_funcionario,email_funcionario,celular_funcionario) VALUES (:nome_funcionario,:cpf_funcionario,:cargo,:data_admissao,:usuario_funcionario,:senha_funcionario,:email_funcionario,:celular_funcionario)"; 
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':nome_funcionario', $nomefuncionario); //PARAM_INT < NUMERO // PARAM_XYZ Especificar tipo.
         $stmt->bindParam(':cpf_funcionario', $cpffuncionario);
         $stmt->bindParam(':cargo', $cargo);
         $stmt->bindParam(':data_admissao', $dataadmissao);
         $stmt->bindParam(':usuario_funcionario', $usuariofuncionario);
-        $stmt->bindParam(':senha_funcionario', $senhafuncionario);
+        $stmt->bindValue(':senha_funcionario', password_hash($senhafuncionario, PASSWORD_DEFAULT));
         $stmt->bindParam(':email_funcionario', $emailfuncionario);
         $stmt->bindParam(':celular_funcionario', $celularfuncionario);
         $stmt->execute();
